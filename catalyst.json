@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "targets": [
+      "hackathon_2022_function",
+      "microservice"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

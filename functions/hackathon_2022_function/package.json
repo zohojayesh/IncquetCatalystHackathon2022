@@ -1,0 +1,9 @@
+{
+	"name": "hackathon_2022_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "jayesh.sonawane1993@gmail.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

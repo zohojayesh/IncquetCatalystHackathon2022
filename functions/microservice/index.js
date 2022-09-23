@@ -1,0 +1,127 @@
+"use strict"
+
+const express = require('express');
+const catalyst = require('zcatalyst-sdk-node');
+const shortid = require('shortid');
+const app = express();
+app.use(express.json());
+
+app.post("/cache", (req, res) => {
+
+    const catalystApp = catalyst.initialize(req);
+
+	const requestQuery = req.query;
+
+	//Get Segment instance with segment ID (If no ID is given, Default segment is used)
+	let segment = catalystApp.cache().segment();
+	//Insert Cache using put by passing the key-value pair.
+	let cachePromise = segment.put(requestQuery.name, requestQuery.value, requestQuery.expiry);
+
+	cachePromise
+		.then((cache) => {
+			console.log("\nInserted Cache : " + JSON.stringify(cache));
+			res.status(200).json(cache);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).send(err);
+		});
+
+});
+
+app.post("/datastore", (req, res) => {
+
+    let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
+
+	const requestBody = req.body;
+
+	//Get table meta object without details.
+	let table = catalystApp.datastore().table('SampleTable');
+
+	//Use Table Meta Object to insert the row which returns a promise
+	let insertPromise = table.insertRow({
+		Name: requestBody.name,
+		Age: requestBody.age,
+		SearchIndexedColumn: requestBody.id
+	});
+
+	insertPromise
+		.then((row) => {
+			console.log("\nInserted Row : " + JSON.stringify(row));
+			res.status(200).json(row);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).send(err);
+		});
+});
+
+app.get("/Anshu",(req,res)=>{
+	res.status(200).send("Hey I am Anshuman Yadav");
+})
+
+app.post("/URL_Shortner",(req,res)=>{
+	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
+	const requestBody = req.body;
+	const baseUrl="https://incquet.com/to"
+	let urlCode = shortid.generate();
+    let shortUrl = baseUrl + "/:" + urlCode;
+	let table = catalystApp.datastore().table('URL_Shortner');
+	let insertPromise = table.insertRow({
+		long_url: requestBody.long_url,
+		code: urlCode,
+		shortUrl:shortUrl,
+		SearchIndexedColumn: requestBody.id
+	});
+	insertPromise
+	.then((row) => {
+		console.log("\nInserted Row : " + JSON.stringify(row));
+		res.status(200).json(row);
+	})
+	.catch((err) => {
+		console.log(err);
+		res.status(500).send(err);
+	});
+
+
+})
+
+app.get("/getCode",(req,res)=>{
+	
+	const searchData=req.body.code+"";
+	console.log(searchData);
+	let config = {
+        search: "URL_Shortner*",
+        search_table_columns: {
+            urlCode: [searchData],          		
+			}
+    };
+	
+	try {
+		let search = app.search();  
+		let searchPromise = search.executeSearchQuery(config);
+		console.log(searchPromise);
+		const url= searchPromise.then(searchResult => {
+			console.log(searchResult);
+			res.status(200).send(searchResult)
+			//return searchResult;
+	    });		 
+		if (url) {
+		  console.log("Long url found for short url. Redirecting...");
+		  return res.redirect(url.long_url);
+		} else {
+		  return res.status(404).json({ message: "No url found" });
+		}
+	  } catch (error) {
+		console.error(error);
+		return res.status(500).json({ message: "Some error has occurred" });
+	 }
+})
+
+app.all("/", (req,res) => {
+
+	res.status(200).send("I am Live and Ready.");
+
+});
+
+module.exports = app;

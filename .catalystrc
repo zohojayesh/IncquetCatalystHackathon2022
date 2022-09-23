@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "11176000000062001",
+      "name": "hackathon2022",
+      "domain": {
+        "id": "10047979928",
+        "name": "hackathon2022-775626433.development"
+      },
+      "env": [
+        {
+          "idx": 1,
+          "id": "775626433",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

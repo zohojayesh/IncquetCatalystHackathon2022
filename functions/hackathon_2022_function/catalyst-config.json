@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "hackathon_2022_function",
+		"stack": "node16",
+		"type": "advancedio"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

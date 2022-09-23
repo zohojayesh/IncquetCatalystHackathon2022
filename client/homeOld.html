@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incquet Hackathon Homepage</title>
+</head>
+<body>
+    <p id="result">
+
+    </p>
+    <hr>
+    <button onclick="getData()">getData</button>
+    <p id="data">
+
+    </p>
+</body>
+<script src="https://static.zohocdn.com/catalyst/sdk/js/3.1.0/catalystWebSDK.js"></script>
+<script src="/__catalyst/sdk/init.js"></script>
+<script>
+catalyst.auth.isUserAuthenticated().then(result => {
+    console.log('result',result);
+    document.getElementById('result').innerHTML= JSON.stringify(result);
+}).catch(err => {
+    console.log('error ',err);
+    console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');
+
+});  
+
+function getData(hasNext = true, next_token = undefined) {
+    if (!hasNext) {
+        return;
+    } 
+    var datastore = catalyst.table;
+    var table = datastore.tableId('URL_Shortner');
+
+    console.log('datastore',datastore);
+    table 
+        .getPagedRows({ next_token, max_rows: 100 }) //Define the maximum rows to be fetched in a single page and pass it along with nextToken
+        .then(resp => {
+            console.log('rows : ', resp.content); //Fetch the rows from the table
+            document.getElementById('data').innerHTML=JSON.stringify(resp.content) ;
+            return getData(resp.more_records, resp.next_token); //Fetch the next set of records and the token string for the next iteration
+        })
+        .catch((err) => {
+            console.log(err.toString());
+        });
+}
+</script>
+</html>
