@@ -64,3 +64,46 @@ addDir of node_modules in hackathon_2022_function detected. Preparing your funct
 [info] [2022-09-23T11:22:13.543Z] : ℹ server[hackathon_2022_function]: ready!
 [info] [2022-09-23T13:05:19.617Z] : Change(s) is detected in index.html of the Web-Client.
 [info] [2022-09-23T13:05:20.079Z] : Change(s) is detected in index.html of the Web-Client.
+[debug] [2022-09-23T13:06:55.331Z] : 
+[debug] [2022-09-23T13:06:55.332Z] : ----------------------------------------------------------------------
+[debug] [2022-09-23T13:06:55.333Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-09-23T13:06:55.333Z] : CLI Version:  1.13.3
+[debug] [2022-09-23T13:06:55.333Z] : Platform:     darwin
+[debug] [2022-09-23T13:06:55.334Z] : Node Version: v16.17.0
+[debug] [2022-09-23T13:06:55.339Z] : Time:         Fri Sep 23 2022 18:36:55 GMT+0530 (India Standard Time)
+[debug] [2022-09-23T13:06:55.340Z] : ----------------------------------------------------------------------
+[debug] [2022-09-23T13:06:55.340Z] : 
+[debug] [2022-09-23T13:06:56.429Z] : > authorizing via signed-in user option
+[debug] [2022-09-23T13:06:56.429Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-09-23T13:06:56.441Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+
+[debug] [2022-09-23T13:06:57.382Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 13:06:57 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=56bccea5-5dfa-4c14-98e2-38764128afbf;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=56bccea5-5dfa-4c14-98e2-38764128afbf;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T13:06:57.387Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
+
+[debug] [2022-09-23T13:06:58.297Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 13:06:58 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=1814e681-bcad-47ad-9c9b-a8761a2ddd14;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1814e681-bcad-47ad-9c9b-a8761a2ddd14;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T13:06:58.485Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
+[debug] [2022-09-23T13:06:58.493Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-09-23T13:06:58.498Z] : http port : '3030' is not available. Hence port '3032' will be used instead.
+[debug] [2022-09-23T13:06:59.378Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 13:06:59 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=76744839-c5ae-4c25-985a-c31fbdfe1848;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=76744839-c5ae-4c25-985a-c31fbdfe1848;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T13:06:59.381Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-23T13:06:59.381Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-23T13:06:59.389Z] : http port : '3010' is not available. Hence port '3012' will be used instead.
+[debug] [2022-09-23T13:06:59.391Z] : http port : '3010' is not available. Hence port '3013' will be used instead.
+[info] [2022-09-23T13:06:59.425Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3001/server/hackathon_2022_function/
+[info] [2022-09-23T13:06:59.425Z] : 
+[info] [2022-09-23T13:06:59.433Z] : ℹ server[microservice]: URL : http://localhost:3001/server/microservice/
+[info] [2022-09-23T13:06:59.433Z] : 
+[info] [2022-09-23T13:06:59.583Z] : ℹ client[clientApp]: URL : http://localhost:3001/app/
+[error] [2022-09-23T13:07:00.452Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-23T13:07:00.453Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-23T13:07:00.694Z] : Change(s) is detected in .catalyst/reload-script.js of the Web-Client.
+[error] [2022-09-23T13:07:00.731Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-23T13:07:00.732Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
