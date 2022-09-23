@@ -373,3 +373,126 @@ Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 16:16:47 GMT","conten
 [error] [2022-09-23T16:16:54.077Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css
 [debug] [2022-09-23T16:16:54.078Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css'
 [info] [2022-09-23T16:19:48.945Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-23T16:44:22.508Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T16:44:25.135Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3
+[debug] [2022-09-23T16:44:25.136Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3'
+[info] [2022-09-23T16:45:14.200Z] : Addition of file(s) is detected in home/components/Product_Side_Nav.vue of the Web-Client.
+[info] [2022-09-23T16:45:51.901Z] : Change(s) is detected in home/components/Product_Side_Nav.vue of the Web-Client.
+[info] [2022-09-23T16:45:59.839Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:45:59.931Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:47:30.136Z] : Deletion of file(s) is detected in home/components/Product_Side_Nav.vue of the Web-Client.
+[info] [2022-09-23T16:47:30.139Z] : Addition of file(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-23T16:47:49.911Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:47:55.116Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:48:07.663Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:49:47.941Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:49:52.328Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:49:56.684Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:50:02.607Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:50:02.707Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:50:25.266Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[debug] [2022-09-23T16:50:33.094Z] : > refreshing access token <
+[debug] [2022-09-23T16:50:33.102Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-23T16:50:34.128Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 16:50:34 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=57c7a14afabcac9a0b9dfc64b3542b70; Path=/","iamcsr=62244637-e06c-4aad-818b-f7e1dabb6d05;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=62244637-e06c-4aad-818b-f7e1dabb6d05;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[error] [2022-09-23T16:50:38.794Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/components/ProductSideBar.vue
+[debug] [2022-09-23T16:50:38.795Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/components/ProductSideBar.vue'
+[info] [2022-09-23T16:51:23.893Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-23T16:56:56.382Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T16:57:03.665Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/components/ProductSideBar.vue
+[debug] [2022-09-23T16:57:03.665Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/components/ProductSideBar.vue'
+[info] [2022-09-23T16:57:42.257Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T16:57:55.603Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T16:57:57.384Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1
+[debug] [2022-09-23T16:57:57.384Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1'
+[error] [2022-09-23T16:58:08.085Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/components/ProductSideBar.vue
+[debug] [2022-09-23T16:58:08.086Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/components/ProductSideBar.vue'
+[info] [2022-09-23T16:58:58.087Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T16:59:00.312Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1
+[debug] [2022-09-23T16:59:00.312Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1'
+[error] [2022-09-23T16:59:28.427Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/.../components/ProductSideBar.vue
+[debug] [2022-09-23T16:59:28.427Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/.../components/ProductSideBar.vue'
+[info] [2022-09-23T17:02:00.954Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T17:02:16.744Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/components/ProductSideBar.vue
+[debug] [2022-09-23T17:02:16.745Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/components/ProductSideBar.vue'
+[info] [2022-09-23T17:02:40.592Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:07:01.364Z] : Change(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T17:07:04.544Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1
+[debug] [2022-09-23T17:07:04.548Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1'
+[error] [2022-09-23T17:45:48.781Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-23T17:45:48.782Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue'
+[error] [2022-09-23T17:45:50.374Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-23T17:45:50.374Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue'
+[info] [2022-09-23T17:55:44.179Z] : Deletion of file(s) is detected in home/views/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:55:44.181Z] : Addition of file(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T17:56:45.203Z] : Change(s) is detected in home/main.js of the Web-Client.
+[debug] [2022-09-23T17:56:48.168Z] : > refreshing access token <
+[debug] [2022-09-23T17:56:48.188Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-23T17:56:49.310Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 17:56:49 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=dcb92d0f99dd7421201f8dc746d54606; Path=/","iamcsr=fcc734fa-dbdc-49d1-8c5d-f21c31ee9826;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fcc734fa-dbdc-49d1-8c5d-f21c31ee9826;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-09-23T17:57:28.509Z] : Addition of file(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:57:39.819Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:57:42.056Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:57:42.149Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:57:51.296Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:58:52.624Z] : Deletion of file(s) is detected in home/components/Product.vue of the Web-Client.
+[info] [2022-09-23T17:58:52.625Z] : Addition of file(s) is detected in home/components/ProductItem.vue of the Web-Client.
+[info] [2022-09-23T17:58:53.987Z] : Change(s) is detected in home/components/ProductItem.vue of the Web-Client.
+[info] [2022-09-23T17:58:54.092Z] : Change(s) is detected in home/components/ProductItem.vue of the Web-Client.
+[info] [2022-09-23T17:58:56.644Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:58:56.746Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T17:59:16.471Z] : Change(s) is detected in home/views/products.vue of the Web-Client.
+[info] [2022-09-23T18:00:32.475Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:02:30.178Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:02:47.146Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:04:14.496Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:04:33.952Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:08:37.777Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:11:26.446Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:12:03.702Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:14:54.825Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:14:58.786Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:17:48.942Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:18:30.923Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:18:53.139Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:19:19.976Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:19:34.908Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:23:08.866Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:23:55.434Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:24:04.464Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:26:17.509Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:26:47.266Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:28:16.715Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:28:19.259Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:28:19.360Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:28:39.113Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:29:09.212Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:29:59.927Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T18:30:01.361Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1
+[debug] [2022-09-23T18:30:01.363Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/1'
+[info] [2022-09-23T18:31:18.017Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:32:07.015Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:32:42.907Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-23T18:34:50.250Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:35:27.207Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:36:55.254Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:36:56.344Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:36:56.448Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:38:02.429Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:42:16.643Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:44:37.644Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:44:40.453Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:44:44.673Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:45:13.409Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:45:29.861Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:45:45.937Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:47:22.054Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:47:52.907Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:47:57.147Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-23T18:51:56.784Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.

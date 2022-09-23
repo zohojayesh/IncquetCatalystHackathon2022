@@ -12,7 +12,7 @@
 <script>
   module.exports= {
     components:{
-      'product-item':httpVueLoader('../components/Product.vue')
+      'product-item':httpVueLoader('../components/ProductItem.vue')
     },
     data(){
       return{

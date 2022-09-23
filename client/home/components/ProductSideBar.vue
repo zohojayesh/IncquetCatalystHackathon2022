@@ -1,20 +1,10 @@
 <template>
-  <div>
-    <h1> This is Product Detail </h1> 
-    <v-row>
-        <v-col md="3" lg="3" sm="12">
             <v-card
                 flat
-                height="100vh"
             >
-                <v-card
-                elevation="3"
-                
-                >
                 <v-navigation-drawer
                     floating
                     permanent
-                    height="100vh"
                 >
                     <v-list
                     dense
@@ -36,20 +26,12 @@
                     </v-list-item>
                     </v-list>
                 </v-navigation-drawer>
-                </v-card>
             </v-card>
-
-        </v-col>
-        <v-col md="9" lg="9" sm="12">
-            code panel
-        </v-col>
-    </v-row>
-  </div>
+  
 </template>
 
 <script>
 module.exports= {
-  props:['id'],
   data () {
       return {
         items: [
@@ -59,7 +41,8 @@ module.exports= {
           {id:4, title: 'URL Shortner', icon: 'mdi-link-variant' },
         ],
       }
-    },
+    }
+
 }
 </script>
 

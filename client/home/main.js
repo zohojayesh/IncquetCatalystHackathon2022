@@ -1,11 +1,10 @@
-
 const routes = [        
 
-    { path: '/', component: httpVueLoader('./views/Home.vue')},
-    { path: '/products', component: httpVueLoader('./views/Products.vue'),meta: { requiresAuth: true } },
-    { path: '/products/:id', component: httpVueLoader('./views/ProductDetail.vue'),meta: { requiresAuth: true },props: true },
-    { path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
-    { path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } }
+    { name:'home',path: '/', component: httpVueLoader('./views/Home.vue')},
+    { name:'products',path: '/products', component: httpVueLoader('./views/Products.vue'),meta: { requiresAuth: true } },
+    { name:'product_details',path: '/products/:id', component: httpVueLoader('./views/ProductDetailPage.vue'),meta: { requiresAuth: true },props: true },
+    { name:'subscriptions',path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
+    { name:'logs',path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } }
 
   ];
 const router = new VueRouter({
