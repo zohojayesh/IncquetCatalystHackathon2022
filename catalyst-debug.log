@@ -333,3 +333,43 @@ Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 15:46:27 GMT","conten
 [info] [2022-09-23T15:50:13.624Z] : Change(s) is detected in home/main.js of the Web-Client.
 [error] [2022-09-23T15:50:13.717Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css
 [debug] [2022-09-23T15:50:13.717Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css'
+[debug] [2022-09-23T16:16:43.898Z] : 
+[debug] [2022-09-23T16:16:43.899Z] : ----------------------------------------------------------------------
+[debug] [2022-09-23T16:16:43.899Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-09-23T16:16:43.899Z] : CLI Version:  1.12.1
+[debug] [2022-09-23T16:16:43.899Z] : Platform:     darwin
+[debug] [2022-09-23T16:16:43.899Z] : Node Version: v14.18.0
+[debug] [2022-09-23T16:16:43.906Z] : Time:         Fri Sep 23 2022 21:46:43 GMT+0530 (India Standard Time)
+[debug] [2022-09-23T16:16:43.906Z] : ----------------------------------------------------------------------
+[debug] [2022-09-23T16:16:43.906Z] : 
+[debug] [2022-09-23T16:16:44.401Z] : > authorizing via signed-in user option
+[debug] [2022-09-23T16:16:44.402Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-09-23T16:16:44.414Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+
+[debug] [2022-09-23T16:16:45.485Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 16:16:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=73943b38-b523-4c31-a677-6a6a1b429cc1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=73943b38-b523-4c31-a677-6a6a1b429cc1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T16:16:45.492Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
+
+[debug] [2022-09-23T16:16:46.384Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 16:16:46 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=976de908-f033-4059-a424-719351d1beeb;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=976de908-f033-4059-a424-719351d1beeb;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T16:16:46.525Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-09-23T16:16:47.473Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 16:16:47 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=a4ad8039-dd49-4686-b523-719489671d20;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a4ad8039-dd49-4686-b523-719489671d20;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-23T16:16:47.480Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-23T16:16:47.481Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-23T16:16:47.492Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[info] [2022-09-23T16:16:47.652Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
+[info] [2022-09-23T16:16:47.652Z] : 
+[info] [2022-09-23T16:16:47.665Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-23T16:16:47.665Z] : 
+[info] [2022-09-23T16:16:47.818Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/
+[error] [2022-09-23T16:16:48.964Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css
+[debug] [2022-09-23T16:16:48.965Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css'
+[error] [2022-09-23T16:16:54.077Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css
+[debug] [2022-09-23T16:16:54.078Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/main.css'
+[info] [2022-09-23T16:19:48.945Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
