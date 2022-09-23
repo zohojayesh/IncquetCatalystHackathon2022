@@ -34,14 +34,25 @@ const router = new VueRouter({
 // });
 
 
-
+// Vue.use(Pinia.PiniaVuePlugin);
 // YOUR JAVASCRIPT CODE FOR INDEX.HTML GOES HERE
+
 var app = new Vue({
     router,
     el: '#vue_app',
     vuetify: new Vuetify(),
+    // pinia: Pinia.createPinia(),
     components:{'App':httpVueLoader('./App.vue')},
     created:function(){
         console.log("vue app initialised");
-    }
+    },
+    // computed: {
+    //     ...Pinia.mapState(useCounterStore, ['value','product_list'])
+    // },
+    // methods: {
+    //     ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts'])
+    // },
+    created(){
+        // console.log('store value',this.value);
+    }    
 });
