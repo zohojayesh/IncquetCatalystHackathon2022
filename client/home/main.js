@@ -3,6 +3,7 @@ const routes = [
 
     { path: '/', component: httpVueLoader('./views/Home.vue')},
     { path: '/products', component: httpVueLoader('./views/Products.vue'),meta: { requiresAuth: true } },
+    { path: '/productDetail', component: httpVueLoader('./views/ProductDetail.vue'),meta: { requiresAuth: true } },
     { path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
     { path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } }
 

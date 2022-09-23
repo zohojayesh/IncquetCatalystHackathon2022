@@ -1,13 +1,32 @@
 <template>
   <div>
-    <h1> this is products </h1> 
+    <h1> This is products </h1> 
+    <v-row>
+      <v-col cols="12" md="6" xl="3" lg="3" sm="12" v-for="(prod,i) in prod_list" :key="i" >
+        <router-link :to="`/productDetail/${prod.id}`">
+        <product-item :product="prod"></product-item>
+        </router-link>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-module.exports= {
-
-}
+  module.exports= {
+    components:{
+      'product-item':httpVueLoader('../components/Product.vue')
+    },
+    data(){
+      return{
+        prod_list : [
+          {id:1,name:'CSV to JSON', short_description:'convert csv to json',long_description:' lorem ipsum lorem ipsum lorem ipsum'},
+          {id:2,name:'Phone Call', short_description:'calling',long_description:' lorem ipsum lorem ipsum lorem ipsum'},
+          {id:3,name:'Google Drive', short_description:' drive ',long_description:' lorem ipsum lorem ipsum lorem ipsum'},
+          {id:4,name:'URL Shortner', short_description:'shortner',long_description:' lorem ipsum lorem ipsum lorem ipsum'},
+        ]
+      }
+    }
+  }
 </script>
 
 <style>
