@@ -2,6 +2,8 @@
     <v-card elevation="2" >
         <v-card-title>
             {{product.name}}
+
+            <v-btn class="red--text" text link absolute right>Subscribe</v-btn>
         </v-card-title>
         <v-card-subtitle>
             {{product.short_description}}
@@ -30,7 +32,7 @@
 
 <script>
 module.exports = {
-    props:['product']
+    props:['product'],
 }
 </script>
 

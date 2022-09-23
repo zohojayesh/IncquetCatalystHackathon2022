@@ -496,3 +496,25 @@ Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 17:56:49 GMT","conten
 [info] [2022-09-23T18:47:52.907Z] : Change(s) is detected in home/main.js of the Web-Client.
 [info] [2022-09-23T18:47:57.147Z] : Change(s) is detected in home/main.js of the Web-Client.
 [info] [2022-09-23T18:51:56.784Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-23T18:57:56.752Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[debug] [2022-09-23T18:57:58.859Z] : > refreshing access token <
+[debug] [2022-09-23T18:57:58.884Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-23T18:57:59.897Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 18:57:59 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=dcb92d0f99dd7421201f8dc746d54606; Path=/","iamcsr=799af891-8f8d-441d-aafd-f631f2a9d965;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=799af891-8f8d-441d-aafd-f631f2a9d965;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-09-23T18:58:17.600Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:58:39.444Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:58:45.360Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:59:34.374Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T18:59:51.335Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T18:59:52.686Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/2
+[debug] [2022-09-23T18:59:52.687Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/2'
+[info] [2022-09-23T19:00:18.646Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T19:00:46.807Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T19:01:04.442Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T19:01:14.679Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T19:01:15.753Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/4
+[debug] [2022-09-23T19:01:15.754Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/4'
+[info] [2022-09-23T19:01:45.813Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
