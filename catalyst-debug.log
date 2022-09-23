@@ -518,3 +518,33 @@ Response Headers: {"server":"ZGS","date":"Fri, 23 Sep 2022 18:57:59 GMT","conten
 [error] [2022-09-23T19:01:15.753Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/4
 [debug] [2022-09-23T19:01:15.754Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/4'
 [info] [2022-09-23T19:01:45.813Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T19:25:18.617Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T19:25:21.277Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3
+[debug] [2022-09-23T19:25:21.278Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3'
+[error] [2022-09-23T19:25:25.356Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home
+[debug] [2022-09-23T19:25:25.361Z] : Error: EISDIR, read
+    at SendStream.ondirectory (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/express/lib/response.js:1040:15)
+    at SendStream.emit (events.js:400:28)
+    at SendStream.redirect (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/send/index.js:479:10)
+    at onstat (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/send/index.js:727:41)
+    at FSReqCallback.oncomplete (fs.js:192:5)
+[error] [2022-09-23T19:25:26.871Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home
+[debug] [2022-09-23T19:25:26.890Z] : Error: EISDIR, read
+    at SendStream.ondirectory (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/express/lib/response.js:1040:15)
+    at SendStream.emit (events.js:400:28)
+    at SendStream.redirect (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/send/index.js:479:10)
+    at onstat (/usr/local/lib/node_modules/zcatalyst-cli/node_modules/send/index.js:727:41)
+    at FSReqCallback.oncomplete (fs.js:192:5)
+[info] [2022-09-23T19:26:04.941Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-23T19:26:09.562Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-09-23T19:27:05.513Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-23T19:27:05.514Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue'
+[error] [2022-09-23T19:27:06.221Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Logs.vue
+[debug] [2022-09-23T19:27:06.221Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Logs.vue'
+[info] [2022-09-23T19:28:47.490Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:28:57.739Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:28:57.839Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:29:28.496Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:30:02.164Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:30:33.124Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-23T19:50:10.183Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.

@@ -36,10 +36,11 @@
         <v-list-item>
             <v-btn
             rounded
-            color="primary"
+            color="deep-purple"
             dark
+            block
             >
-            Rounded Button
+            Logout
             </v-btn>
         </v-list-item>
       </v-list>
