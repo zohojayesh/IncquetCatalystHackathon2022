@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> This is Product Detail </h1> 
+    <div class="heading"> <h1> This is Product Detail </h1> </div>
     <v-row>
         <v-col md="3" lg="3" sm="12">
           <product-sidebar></product-sidebar>
