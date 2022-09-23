@@ -24,7 +24,7 @@
                         v-for="item in items"
                         :key="item.title"
                         link
-                        :to="`/productDetail/${item.id}`"
+                        :to="`/products/${item.id}`"
                     >
                         <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
@@ -49,6 +49,7 @@
 
 <script>
 module.exports= {
+  props:['id'],
   data () {
       return {
         items: [
