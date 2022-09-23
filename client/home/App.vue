@@ -24,7 +24,8 @@ module.exports = {
     data(){
       return{
         componentKey:0,
-        user:{}
+        user:{},
+        product_list:[],
       }
     },
     methods: {
@@ -39,7 +40,29 @@ module.exports = {
             console.log('error ',err);
             console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');
         });
+      },
+      fetchProducts(hasNext = true, next_token = undefined){
+        if (!hasNext) {
+            return;
+        } 
+
+        var datastore = catalyst.table;
+        var table = datastore.tableId('Products');
+    
+        console.log('datastore',datastore);
+        table
+        .getPagedRows({ next_token, max_rows: 100 }) //Define the maximum rows to be fetched in a single page and pass it along with nextToken
+        .then(resp => {
+                console.log('rows : ', resp.content); //Fetch the rows from the table
+                this.product_list = resp.content;
+                this.$root.product_list = this.product_list;
+                return this.fetchProducts(resp.more_records, resp.next_token);
+            })
+            .catch((err) => {
+                console.log(err.toString());
+            });        
       }
+
     },
     mounted() {
             this.$root.$on('reload', () => {
@@ -47,6 +70,11 @@ module.exports = {
             });
 
             this.getUser();
+
+            // //
+            // this.$root.increment();
+            //
+            this.fetchProducts();
         }
 }
 </script>
