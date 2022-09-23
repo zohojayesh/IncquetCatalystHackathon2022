@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> this is products </h1> 
+    <h1> this is Logs </h1> 
   </div>
 </template>
 

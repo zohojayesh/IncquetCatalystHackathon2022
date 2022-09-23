@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> this is products </h1> 
+    <h1> this is Subscription </h1> 
   </div>
 </template>
 

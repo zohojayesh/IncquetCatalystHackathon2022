@@ -1,11 +1,15 @@
 
 const routes = [        
 
-    { path: '/', component: httpVueLoader('./views/home.vue')},
-    { path: '/products', component: httpVueLoader('./views/products.vue'),meta: { requiresAuth: true } }
+    { path: '/', component: httpVueLoader('./views/Home.vue')},
+    { path: '/products', component: httpVueLoader('./views/Products.vue'),meta: { requiresAuth: true } },
+    { path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
+    { path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } }
 
   ];
 const router = new VueRouter({
+    mode:'history',
+    base:'/app/home/',
     routes // short for `routes: routes`
 });
 
@@ -20,14 +24,14 @@ const router = new VueRouter({
 // });
 
 
-router.beforeEach(async (to, from, next) => {
-    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-    if (requiresAuth && !await catalyst.auth.isUserAuthenticated()){
-        next('../index.html');
-    }else{
-        next();
-    }
-});
+// router.beforeEach(async (to, from, next) => {
+//     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+//     if (requiresAuth && !await catalyst.auth.isUserAuthenticated()){
+//         next('../index.html');
+//     }else{
+//         next();
+//     }
+// });
 
 
 
