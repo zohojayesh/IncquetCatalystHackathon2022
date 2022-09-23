@@ -3,14 +3,7 @@
     <h1> This is Product Detail </h1> 
     <v-row>
         <v-col md="3" lg="3" sm="12">
-            <v-card
-                flat
-                height="100vh"
-            >
-                <v-card
-                elevation="3"
-                
-                >
+           
                 <v-navigation-drawer
                     floating
                     permanent
@@ -36,10 +29,7 @@
                     </v-list-item>
                     </v-list>
                 </v-navigation-drawer>
-                </v-card>
-            </v-card>
-
-        </v-col>
+            </v-col>
         <v-col md="9" lg="9" sm="12">
             code panel
         </v-col>

@@ -33,15 +33,17 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item >
             <v-btn
             rounded
             color="primary"
             dark
+            block
             >
-            Rounded Button
+            Logout
             </v-btn>
-        </v-list-item>
+        </v-list-item> 
+        
       </v-list>
     </v-navigation-drawer>
 </template>
