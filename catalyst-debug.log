@@ -309,3 +309,16 @@ Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 18:55:44 GMT","conten
 [info] [2022-09-24T19:07:20.293Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
 [info] [2022-09-24T19:07:31.061Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
 [info] [2022-09-24T19:10:18.938Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T19:21:35.297Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:22:20.955Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:23:17.097Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:24:21.387Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:24:22.338Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:25:03.614Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:25:04.786Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:25:04.887Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:26:05.967Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:26:10.402Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:26:11.901Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:26:12.000Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:28:00.331Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.

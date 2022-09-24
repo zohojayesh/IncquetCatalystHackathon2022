@@ -39,7 +39,7 @@
                     :class="{'green--text lighten-2':selectedElement=='header' && !loading,'blue-grey--text':selectedElement!='header'}" text link absolute right>
                         <v-icon> {{selectedElement=='header'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
                     </v-btn>
-                <pre ref="header_code_ref">{{product.header_json}}</pre>
+                <pre  ref="header_code_ref">{{product.header_json | formatjson}} </pre>
             </div>
         </div>
 
@@ -49,12 +49,12 @@
         
             <div class="code-snippetWrapper">
                 <div class="code-snippetArea">
-                    
+
                     <v-btn  :loading="selectedElement=='body' && loading" @click="copyCode('body')" 
                             :class="{'green--text lighten-2':selectedElement=='body' && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement=='body'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
                     </v-btn>
 
-                    <pre ref='body_code_ref'>{{product.body_json}}</pre>
+                    <pre  ref='body_code_ref'>{{product.body_json | formatjson}} </pre>
 
                 </div>
             </div>
@@ -81,6 +81,11 @@ module.exports = {
             const clipboardData =  window.clipboardData ||  navigator.clipboard;
             clipboardData.writeText(code);            
             setTimeout(()=>{this.loading=false;},1000);
+        }
+    },
+    filters:{
+        formatjson(v){
+            return JSON.stringify(JSON.parse(v), null, 2);
         }
     }
 }
