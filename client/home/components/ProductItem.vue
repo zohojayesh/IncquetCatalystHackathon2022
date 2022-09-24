@@ -23,7 +23,7 @@
                   color="orange lighten-2"
                   text
                   link
-                  :to="`/products/${product.id}`"
+                  :to="`/products/${product.ROWID}`"
                 >
                   Explore
                 </v-btn>
