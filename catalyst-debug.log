@@ -245,3 +245,67 @@ Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 13:41:52 GMT","conten
 [error] [2022-09-24T14:24:00.861Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue
 [debug] [2022-09-24T14:24:00.861Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue'
 >>>>>>> Stashed changes
+[debug] [2022-09-24T18:41:49.853Z] : 
+[debug] [2022-09-24T18:41:49.854Z] : ----------------------------------------------------------------------
+[debug] [2022-09-24T18:41:49.855Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-09-24T18:41:49.855Z] : CLI Version:  1.12.1
+[debug] [2022-09-24T18:41:49.855Z] : Platform:     darwin
+[debug] [2022-09-24T18:41:49.855Z] : Node Version: v14.18.0
+[debug] [2022-09-24T18:41:49.861Z] : Time:         Sun Sep 25 2022 00:11:49 GMT+0530 (India Standard Time)
+[debug] [2022-09-24T18:41:49.861Z] : ----------------------------------------------------------------------
+[debug] [2022-09-24T18:41:49.861Z] : 
+[debug] [2022-09-24T18:41:50.317Z] : > authorizing via signed-in user option
+[debug] [2022-09-24T18:41:50.318Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-09-24T18:41:50.335Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+
+[debug] [2022-09-24T18:41:51.407Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 18:41:51 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=e9dbe722-bdae-4c5c-9206-b5b39e70a001;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e9dbe722-bdae-4c5c-9206-b5b39e70a001;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T18:41:51.417Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
+
+[debug] [2022-09-24T18:41:52.288Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 18:41:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=d8dd96a4-5908-4589-b21b-e9f0a5533d60;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d8dd96a4-5908-4589-b21b-e9f0a5533d60;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T18:41:52.431Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-09-24T18:41:53.345Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 18:41:53 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=a26930d3-5976-4db0-8933-d0a45f5cc343;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a26930d3-5976-4db0-8933-d0a45f5cc343;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T18:41:53.352Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-24T18:41:53.352Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-24T18:41:53.366Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[info] [2022-09-24T18:41:53.539Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
+[info] [2022-09-24T18:41:53.539Z] : 
+[info] [2022-09-24T18:41:53.552Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T18:41:53.552Z] : 
+[info] [2022-09-24T18:41:53.693Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/
+[info] [2022-09-24T18:43:20.265Z] : Change(s) is detected in home/components/ProductItem.vue of the Web-Client.
+[info] [2022-09-24T18:44:24.679Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:45:45.817Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-24T18:45:55.067Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-24T18:46:01.750Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-24T18:47:04.158Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:47:09.211Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:48:03.042Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:48:24.199Z] : Change(s) is detected in home/components/ProductSideBar.vue of the Web-Client.
+[info] [2022-09-24T18:48:55.926Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:49:37.244Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:49:40.448Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:50:11.255Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:50:50.194Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T18:55:40.659Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[debug] [2022-09-24T18:55:42.517Z] : > refreshing access token <
+[debug] [2022-09-24T18:55:42.530Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-24T18:55:44.979Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 18:55:44 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=dcb92d0f99dd7421201f8dc746d54606; Path=/","iamcsr=9bb331c5-ea18-472d-9dfe-72b27c8c6fd3;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9bb331c5-ea18-472d-9dfe-72b27c8c6fd3;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-09-24T19:04:25.190Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:04:33.856Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-09-24T19:06:07.065Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T19:07:18.821Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T19:07:20.293Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T19:07:31.061Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[info] [2022-09-24T19:10:18.938Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.

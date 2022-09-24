@@ -1,9 +1,13 @@
 <template>
   <v-container>
-    <div class="heading"> <h1> The API for converting CSV to JSON.  </h1> </div>
+    <div class="heading"> 
+      <h1>
+        <v-btn icon @click="goback()"><v-icon>mdi-arrow-left</v-icon></v-btn>
+        {{this_prod.short_description}}</h1> 
+    </div>
     <v-row>
         <v-col md="3" lg="3" sm="12">
-          <product-sidebar></product-sidebar>
+          <product-sidebar :product_list="product_list"></product-sidebar>
         </v-col>
         <v-col md="9" lg="9" sm="12">
           <product-detail :product="this_prod || {}"></product-detail>
@@ -22,12 +26,12 @@ module.exports= {
   data () {
       return {
         product_list:[],
-        items : [
-          {id:1,name:'CSV to JSON', short_description:'convert csv to json',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-cloud-braces'},
-          {id:2,name:'Phone Call', short_description:'calling',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-phone-outline'},
-          {id:3,name:'Google Drive', short_description:' drive ',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-google-drive'},
-          {id:4,name:'URL Shortner', short_description:'shortner',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-link-variant'},
-        ]        
+        // items : [
+        //   {id:1,name:'CSV to JSON', short_description:'convert csv to json',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-cloud-braces'},
+        //   {id:2,name:'Phone Call', short_description:'calling',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-phone-outline'},
+        //   {id:3,name:'Google Drive', short_description:' drive ',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-google-drive'},
+        //   {id:4,name:'URL Shortner', short_description:'shortner',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-link-variant'},
+        // ]        
       }
     },
   methods:{
@@ -35,11 +39,14 @@ module.exports= {
       console.log('prams',this.$route.params);
       this.product_id = this.$route.params.id;
       console.log('this prod',this.this_prod);
+    },
+    goback(){
+      this.$route.push('/products');
     }
   },
   computed:{
     this_prod(){
-      return this.items.filter(item => {
+      return this.product_list.filter(item => {
          return item.id== this.product_id
       })[0]
     },
@@ -49,6 +56,7 @@ module.exports= {
   },
   created(){
     this.product_list=this.$root.product_list;
+    console.log('this.$root.product_list',this.$root.product_list);
   },
 }
 </script>

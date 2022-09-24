@@ -39,9 +39,7 @@
                     :class="{'green--text lighten-2':selectedElement=='header' && !loading,'blue-grey--text':selectedElement!='header'}" text link absolute right>
                         <v-icon> {{selectedElement=='header'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
                     </v-btn>
-                <pre ref="header_code_ref">{
-content-type:"application-json"
-}</pre>
+                <pre ref="header_code_ref">{{product.header_json}}</pre>
             </div>
         </div>
 
@@ -51,11 +49,13 @@ content-type:"application-json"
         
             <div class="code-snippetWrapper">
                 <div class="code-snippetArea">
-                    <v-btn :loading="selectedElement=='body' && loading" @click="copyCode('body')" 
-                    :class="{'green--text lighten-2':selectedElement=='body' && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement=='body'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon></v-btn>
-                <pre ref='body_code_ref'>{
-content-type:"application-json"
-}</pre>
+                    
+                    <v-btn  :loading="selectedElement=='body' && loading" @click="copyCode('body')" 
+                            :class="{'green--text lighten-2':selectedElement=='body' && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement=='body'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
+                    </v-btn>
+
+                    <pre ref='body_code_ref'>{{product.body_json}}</pre>
+
                 </div>
             </div>
             
