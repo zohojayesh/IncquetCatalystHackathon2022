@@ -37,7 +37,6 @@
                                         color="orange lighten-2"
                                         text
                                         link
-                                        
                                         > Explore
                                         </v-btn>
                                         <v-spacer></v-spacer>
