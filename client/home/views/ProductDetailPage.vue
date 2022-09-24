@@ -41,7 +41,7 @@ module.exports= {
       console.log('this prod',this.this_prod);
     },
     goback(){
-      this.$route.push('/products');
+       this.$router.push({ path: '/products' })
     }
   },
   computed:{
