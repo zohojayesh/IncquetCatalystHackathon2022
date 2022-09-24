@@ -16,33 +16,21 @@
                     <div class="col-lg-7 col-md-7 col-12">
                         <v-row>
                             <v-col md="4" sm="4">
-                                 <v-card
-                                    class="mx-auto"
-                                    max-width="344">
-                                    <v-img
-                                        src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                                        height="100px"
-                                    ></v-img>
-
-                                    <v-card-title>
-                                        short desc
+                                <v-card
+                                    color="#1F7087"
+                                    dark
+                                >
+                                    <v-card-title class="text-h5 text-right">
+                                    1232
                                     </v-card-title>
-
-                                    <v-card-subtitle>
-                                        short desc
-                                    </v-card-subtitle>
+                                    <v-card-subtitle>Listen to your favorite artists.</v-card-subtitle>
 
                                     <v-card-actions>
-                                        <v-btn
-                                        color="orange lighten-2"
-                                        text
-                                        link
-                                        > Explore
-                                        </v-btn>
-                                        <v-spacer></v-spacer>
+                                    <v-btn text>
+                                        Explore
+                                    </v-btn>
                                     </v-card-actions>
                                 </v-card>
-                                <!--  card -->
                             </v-col>
                             <v-col md="4" sm="4">
                                 <v-card
@@ -50,14 +38,31 @@
                                     dark
                                 >
                                     <v-card-title class="text-h5">
-                                    Unlimited music now
+                                    1232
                                     </v-card-title>
 
-                                    <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.</v-card-subtitle>
+                                    <v-card-subtitle>Listen to your favorite artists.</v-card-subtitle>
 
                                     <v-card-actions>
                                     <v-btn text>
-                                        Listen Now
+                                        Explore
+                                    </v-btn>
+                                    </v-card-actions>
+                                </v-card>
+                            </v-col>
+                             <v-col md="4" sm="4">
+                                <v-card
+                                    color="#952175"
+                                    dark
+                                >
+                                    <v-card-title class="text-h5">
+                                    1232
+                                    </v-card-title>
+                                    <v-card-subtitle>Listen to your favorite artists.</v-card-subtitle>
+
+                                    <v-card-actions>
+                                    <v-btn text>
+                                        Know More
                                     </v-btn>
                                     </v-card-actions>
                                 </v-card>
@@ -65,7 +70,7 @@
                         </v-row>
                         <img class="serv-heartIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031801/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Api_2x_i8ziui.png" >
                         <img class="serv-exclaimIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031790/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Exclaim_2x_wnjdag.png">
-                    </div>
+                    </div> <!-- col-7 -->
                     
                 </div>
             </div>
