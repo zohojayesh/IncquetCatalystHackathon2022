@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="heading"> <h1> This is products </h1> </div>
+    <div class="heading"> <h1> All products </h1> </div>
     <v-row>
       <v-col cols="12" md="6" xl="3" lg="3" sm="12" v-for="(prod,i) in prod_list" :key="i" >
         <product-item :product="prod"></product-item>
