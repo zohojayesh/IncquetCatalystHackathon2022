@@ -6,67 +6,16 @@ const shortid = require('shortid');
 const app = express();
 app.use(express.json());
 
-app.post("/cache", (req, res) => {
-
-    const catalystApp = catalyst.initialize(req);
-
-	const requestQuery = req.query;
-
-	//Get Segment instance with segment ID (If no ID is given, Default segment is used)
-	let segment = catalystApp.cache().segment();
-	//Insert Cache using put by passing the key-value pair.
-	let cachePromise = segment.put(requestQuery.name, requestQuery.value, requestQuery.expiry);
-
-	cachePromise
-		.then((cache) => {
-			console.log("\nInserted Cache : " + JSON.stringify(cache));
-			res.status(200).json(cache);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).send(err);
-		});
-
-});
-
-app.post("/datastore", (req, res) => {
-
-    let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
-
-	const requestBody = req.body;
-
-	//Get table meta object without details.
-	let table = catalystApp.datastore().table('SampleTable');
-
-	//Use Table Meta Object to insert the row which returns a promise
-	let insertPromise = table.insertRow({
-		Name: requestBody.name,
-		Age: requestBody.age,
-		SearchIndexedColumn: requestBody.id
-	});
-
-	insertPromise
-		.then((row) => {
-			console.log("\nInserted Row : " + JSON.stringify(row));
-			res.status(200).json(row);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).send(err);
-		});
-});
-
-app.get("/Anshu",(req,res)=>{
-	res.status(200).send("Hey I am Anshuman Yadav");
-})
-
 app.post("/URL_Shortner",(req,res)=>{
 	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
 	const requestBody = req.body;
 	const baseUrl="https://incquet.com/to"
 	let urlCode = shortid.generate();
     let shortUrl = baseUrl + "?c=" + urlCode;
-	let table = catalystApp.datastore().table('URL_Shortner');
+	let datastore = catalystApp.datastore();
+	let table = datastore.table('URL_Shortner');
+	let log={};
+	//
 	let insertPromise = table.insertRow({
 		long_url: requestBody.long_url,
 		code: urlCode,
@@ -77,10 +26,16 @@ app.post("/URL_Shortner",(req,res)=>{
 	.then((row) => {
 		console.log("\nInserted Row : " + JSON.stringify(row));
 		res.status(200).json(row);
+		log.status = 'status';
+		log.meta = JSON.stringify(row);
 	})
 	.catch((err) => {
 		console.log(err);
 		res.status(500).send(err);
+		log.status = 'failure';
+		log.meta = JSON.stringify(err);
+	}).finally(()=>{
+		createLog(datastore,1,2,log)
 	});
 
 
@@ -145,10 +100,32 @@ app.post("/getCodeV2",(req,res)=>{
 	 }
 })
 
+
 app.all("/", (req,res) => {
 
 	res.status(200).send("I am Live and Ready.");
 
 });
+
+function createLog(datastore,product_id,subscription_id,log){
+	//Create Configuration for function Execution
+
+	let rowData = 
+    { 
+        product_id: product_id,
+        subscription_id: subscription_id,
+        Status: log.status,
+		Meta:log.meta
+    };
+	console.log('logInserPayload',rowData);
+    //Use the table meta object to insert the row which returns a promise
+    let table = datastore.table('Logs');
+    let insertPromise = table.insertRow(rowData);
+    insertPromise.then((row) => {
+		console.log('log inserted',row);
+	}).catch(e=>{
+		console.log('log insersion error',e);
+	});
+}
 
 module.exports = app;

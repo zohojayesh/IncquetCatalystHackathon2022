@@ -4,7 +4,8 @@ const routes = [
     { name:'products',path: '/products', component: httpVueLoader('./views/Products.vue'),meta: { requiresAuth: true } },
     { name:'product_details',path: '/products/:id', component: httpVueLoader('./views/ProductDetailPage.vue'),meta: { requiresAuth: true },props: true },
     { name:'subscriptions',path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
-    { name:'logs',path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } }
+    { name:'logs',path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } },
+    { name:'default',path: '*', component: httpVueLoader('./views/Home.vue')}
 
   ];
 const router = new VueRouter({

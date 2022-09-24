@@ -2,7 +2,8 @@
   "functions": {
     "targets": [
       "hackathon_2022_function",
-      "microservice"
+      "microservice",
+      "addLog"
     ],
     "ignore": [],
     "source": "functions"
