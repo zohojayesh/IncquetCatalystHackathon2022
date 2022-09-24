@@ -1,8 +1,17 @@
 /* LET THE STYLING BEGIN */
-
+.heading h1 {
+    margin-bottom: 0;
+    color: #261751;
+    font-size: 26px;
+    font-family: 'Roboto',serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0.5em 0px;
+}
 .code-snippets {
     background-color: #f7f6f9 !important;
     /* border: 1px solid #e8e2f2; */
+    padding: 0px 0px 1em;
 }
 .prod-catogary-title{
     color: #727272;
@@ -11,16 +20,26 @@
     font-weight: 700;
 }
 .code-snippetWrapper{
-    padding: 2px 5em;
+    margin: 2px 5em 17px;
 }
-
-.heading h1 {
-    margin-bottom: 0;
+.code-snippetArea{
+    background: #ebe9ef;
+    border-radius: 5px;
+    position: relative;
+    padding: 0.8em;
+}
+.code-snippetWrapper pre{
+    padding: 0.5em 0.7em;
+}
+.code-snippets h6 {
     color: #261751;
-    font-size: 26px;
-    
-    font-family: 'Roboto',serif;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0.5em 0px;
+    opacity: 1;
+    font-size: 14px!important;
+    font-family: Overpass Mono,monospace;
+}
+.monospace-text{
+    color: #19171c;
+    font-size: 15px!important;
+    font-family: Overpass Mono,monospace;  
+    margin-bottom: 7px !important; 
 }

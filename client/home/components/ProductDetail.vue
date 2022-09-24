@@ -1,64 +1,60 @@
 <template>
-
     <div>
-        <v-card outlined class="mb-5">
-            <v-row>
-                <v-col md="2">
-                    <v-card-title class="text-h5 font-weight-regular blue-grey lighten-4 white--text">
-                        <v-icon>
-                            mdi-link-variant
-                        </v-icon>
-                    </v-card-title>
-                </v-col>
-                <v-col md="8">
-                    <v-card-text class="text-h4 p-0">
-                        asdfka asf asfasf
-                    </v-card-text>
-                </v-col>
-                <v-col md="2">
-                    <v-card-title class="text-h5 font-weight-regular blue-grey lighten-4 white--text">
-                        <v-icon>
-                            mdi-copy
-                        </v-icon>
-                    </v-card-title>
-                </v-col>
-                
-                    
-                    
-            </v-row>
-        </v-card>
-
     <v-card elevation="2" class="code-snippets">
         <v-card-title>
             {{product.name}}
             <v-btn class="red--text" text link absolute right>Subscribe</v-btn>
         </v-card-title>
-        <v-card-subtitle>
+        <v-card-subtitle class="pt-2 pb-2">
             {{product.short_description}}
         </v-card-subtitle>
-        <v-card-text>
+        <v-card-text class="pb-2">
             {{product.long_description}}
         </v-card-text>
+        <v-card-text>
+            <p class="monospace-text">
+                POST 
+                <span class="blue-grey--text">
+                    //v2.convertapi.com/convert/heic/to/jpg?Secret=< YOUR SECRET HERE > 
+                </span> </p>
+            <p class="monospace-text">
+                <span class="indigo--text"> 
+                    Content-Type:</span> application/json</p>
+        </v-card-text>
+
+
+
         <v-divider></v-divider>
+
         <v-card-subtitle> Header </v-card-subtitle>
+            <!-- <v-card-text>
+                <p class="monospace-text">
+                    POST https://v2.convertapi.com/convert/heic/to/jpg?Secret=<YOUR SECRET HERE > </p>
+                <p class="monospace-text">Content-Type: application/json</p>
+            </v-card-text> -->
             <div class="code-snippetWrapper">
-                <pre>
-{
+                <div class="code-snippetArea">
+                    <v-btn class="blue-grey--text" text link absolute right><v-icon> mdi-content-copy </v-icon></v-btn>
+                <pre>{
 content-type:"application-json"
-}
-                </pre>
+}</pre>
             </div>
+        </div>
+
 
         <v-divider></v-divider>
         <v-card-subtitle> Body </v-card-subtitle>
+        
             <div class="code-snippetWrapper">
-                <pre>
-    <code>{
-    content-type:"application-json"
-    }</code>
-                </pre>
+                <div class="code-snippetArea">
+                    <v-btn class="blue-grey--text" text link absolute right><v-icon> mdi-content-copy </v-icon></v-btn>
+                <pre>{
+content-type:"application-json"
+}</pre>
+                </div>
             </div>
-    </v-card>
+            
+        </v-card>
     </div>
 </template>
 
