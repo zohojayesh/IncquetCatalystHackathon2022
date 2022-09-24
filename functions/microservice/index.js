@@ -2,7 +2,7 @@
 
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
-// const shortid = require('shortid');
+const shortid = require('shortid');
 const app = express();
 app.use(express.json());
 
@@ -60,31 +60,31 @@ app.get("/Anshu",(req,res)=>{
 	res.status(200).send("Hey I am Anshuman Yadav");
 })
 
-// app.post("/URL_Shortner",(req,res)=>{
-// 	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
-// 	const requestBody = req.body;
-// 	const baseUrl="https://incquet.com/to"
-// 	let urlCode = shortid.generate();
-//     let shortUrl = baseUrl + "/:" + urlCode;
-// 	let table = catalystApp.datastore().table('URL_Shortner');
-// 	let insertPromise = table.insertRow({
-// 		long_url: requestBody.long_url,
-// 		code: urlCode,
-// 		shortUrl:shortUrl,
-// 		SearchIndexedColumn: requestBody.id
-// 	});
-// 	insertPromise
-// 	.then((row) => {
-// 		console.log("\nInserted Row : " + JSON.stringify(row));
-// 		res.status(200).json(row);
-// 	})
-// 	.catch((err) => {
-// 		console.log(err);
-// 		res.status(500).send(err);
-// 	});
+app.post("/URL_Shortner",(req,res)=>{
+	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
+	const requestBody = req.body;
+	const baseUrl="https://incquet.com/to"
+	let urlCode = shortid.generate();
+    let shortUrl = baseUrl + "/:" + urlCode;
+	let table = catalystApp.datastore().table('URL_Shortner');
+	let insertPromise = table.insertRow({
+		long_url: requestBody.long_url,
+		code: urlCode,
+		shortUrl:shortUrl,
+		SearchIndexedColumn: requestBody.id
+	});
+	insertPromise
+	.then((row) => {
+		console.log("\nInserted Row : " + JSON.stringify(row));
+		res.status(200).json(row);
+	})
+	.catch((err) => {
+		console.log(err);
+		res.status(500).send(err);
+	});
 
 
-// })
+})
 
 app.get("/getCode",(req,res)=>{
 	

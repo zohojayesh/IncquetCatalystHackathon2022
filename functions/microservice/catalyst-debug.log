@@ -52,3 +52,8 @@ change of index.js in microservice detected. Preparing your function, please wai
 [info] [2022-09-24T08:25:00.339Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
 [info] [2022-09-24T08:25:00.340Z] : 
 [info] [2022-09-24T08:25:00.446Z] : ℹ server[microservice]: ready!
+[info] [2022-09-24T08:25:56.835Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-24T08:25:56.866Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:25:56.866Z] : 
+[info] [2022-09-24T08:25:56.969Z] : ℹ server[microservice]: ready!
