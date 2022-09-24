@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <div class="heading"> <h1> The API for converting CSV to JSON.  </h1> </div>
     <v-row>
         <v-col md="3" lg="3" sm="12">
@@ -9,7 +9,7 @@
           <product-detail :product="this_prod || {}"></product-detail>
         </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -21,6 +21,7 @@ module.exports= {
   },
   data () {
       return {
+        product_list:[],
         items : [
           {id:1,name:'CSV to JSON', short_description:'convert csv to json',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-cloud-braces'},
           {id:2,name:'Phone Call', short_description:'calling',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-phone-outline'},
@@ -47,7 +48,7 @@ module.exports= {
     }
   },
   created(){
-    console.log('created, prop',this.product_id);
+    this.product_list=this.$root.product_list;
   },
 }
 </script>
