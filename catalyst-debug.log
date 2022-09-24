@@ -180,4 +180,68 @@ Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 13:07:45 GMT","conten
 [info] [2022-09-24T13:28:55.403Z] : Change(s) is detected in home/main.css of the Web-Client.
 [error] [2022-09-24T13:28:55.496Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
 [debug] [2022-09-24T13:28:55.496Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+<<<<<<< Updated upstream
 >>>>>>> bea360937094c2404bd76c06bbd925af8e310710
+=======
+[info] [2022-09-24T13:31:15.042Z] : Change(s) is detected in home/main.css of the Web-Client.
+[error] [2022-09-24T13:31:15.183Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:31:15.183Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:31:44.037Z] : Change(s) is detected in home/views/products.vue of the Web-Client.
+[error] [2022-09-24T13:31:44.137Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:31:44.138Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:32:04.890Z] : Change(s) is detected in home/views/products.vue of the Web-Client.
+[error] [2022-09-24T13:32:05.006Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:32:05.006Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:32:27.141Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[error] [2022-09-24T13:32:27.222Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:32:27.223Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:32:29.209Z] : Change(s) is detected in home/views/ProductDetailPage.vue of the Web-Client.
+[error] [2022-09-24T13:32:29.239Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:32:29.239Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[error] [2022-09-24T13:34:00.729Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/2
+[debug] [2022-09-24T13:34:00.729Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/2'
+[info] [2022-09-24T13:34:47.927Z] : Change(s) is detected in home/main.css of the Web-Client.
+[error] [2022-09-24T13:34:48.124Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:34:48.126Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:36:33.565Z] : Change(s) is detected in home/main.css of the Web-Client.
+[error] [2022-09-24T13:36:33.623Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:36:33.623Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[info] [2022-09-24T13:36:54.019Z] : Change(s) is detected in home/main.css of the Web-Client.
+[error] [2022-09-24T13:36:54.080Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css
+[debug] [2022-09-24T13:36:54.080Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/main.css'
+[debug] [2022-09-24T13:41:51.224Z] : > refreshing access token <
+[debug] [2022-09-24T13:41:51.236Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-24T13:41:53.216Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 13:41:52 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=57c7a14afabcac9a0b9dfc64b3542b70; Path=/","iamcsr=829896ac-2869-4650-ac42-8140cbff370c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=829896ac-2869-4650-ac42-8140cbff370c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-09-24T13:43:49.188Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[error] [2022-09-24T13:43:51.260Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/2
+[debug] [2022-09-24T13:43:51.260Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/2'
+[info] [2022-09-24T13:44:40.481Z] : Change(s) is detected in home/main.css of the Web-Client.
+[error] [2022-09-24T13:44:55.843Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-24T13:44:55.843Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue'
+[info] [2022-09-24T13:52:54.548Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:52:56.145Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:55:01.132Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:55:25.200Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:55:35.860Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:55:50.443Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:56:16.548Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:56:31.137Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:56:58.289Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:57:14.486Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:57:37.690Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-24T13:59:44.743Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[error] [2022-09-24T14:18:22.223Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/3
+[debug] [2022-09-24T14:18:22.223Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/3'
+[error] [2022-09-24T14:23:59.058Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-24T14:23:59.058Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue'
+[error] [2022-09-24T14:23:59.760Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-24T14:23:59.761Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue'
+[error] [2022-09-24T14:24:00.428Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Logs.vue
+[debug] [2022-09-24T14:24:00.428Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Logs.vue'
+[error] [2022-09-24T14:24:00.861Z] : ✖ Unable to serve the requested file: /Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-09-24T14:24:00.861Z] : Error: ENOENT: no such file or directory, stat '/Users/rashmi/Desktop/Zoho/IncquetCatalystHackathon2022/client/home/products/views/Subscriptions.vue'
+>>>>>>> Stashed changes
