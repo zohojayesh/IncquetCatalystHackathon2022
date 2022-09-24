@@ -11,16 +11,47 @@
         <v-card-text class="pb-2">
             {{product.long_description}}
         </v-card-text>
+
+        <v-tabs
+            class="proj_detail_tab"
+            center-active >
+            <v-tab>One</v-tab>
+            <v-tab>Two</v-tab>
+            <v-tab>Three</v-tab>
+        </v-tabs>
+        <v-divider></v-divider>
+    
+    
+  
+        <v-card-subtitle> Endpoint </v-card-subtitle>
         <v-card-text>
-            <p class="monospace-text">
-                POST 
-                <span class="blue-grey--text" ref="body_code_ref">
-                    //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt;
-                </span> 
-            </p>
-            <p class="monospace-text">
-                <span class="indigo--text"> 
-                    Content-Type:</span> application/json</p>
+            <div class="api-wrapperBox">
+                <v-row class="text-center ma-0">
+                    <v-col md="1" class="text-center blue-grey lighten-2">
+                        <p class="monospace-text ma-0">
+                            POST 
+                        </p>
+                    </v-col>
+                    <v-col md="10" class="text-left">
+                        <p class="monospace-text ma-0">
+                            <span class="blue-grey--text" ref="endpoint_code_ref">
+                                //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt;
+                            </span> 
+                        </p>
+                    </v-col>
+                    <v-col md="1" class="text-center">
+                    <v-btn :loading="selectedElement=='endpoint' && loading" @click="copyCode('endpoint')" 
+                    :class="{'green--text lighten-2':selectedElement=='endpoint' && !loading,'blue-grey--text':selectedElement!='endpoint'}" 
+                        text small link absolute right>
+                        <v-icon> 
+                            {{selectedElement=='endpoint'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} 
+                        </v-icon>
+                    </v-btn>
+                    </v-col>
+              
+                
+            </v-row>
+            </div>
         </v-card-text>
 
 

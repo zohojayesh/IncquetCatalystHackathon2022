@@ -20,7 +20,7 @@
 
               <v-card-actions>
                 <v-btn
-                  color="orange lighten-2"
+                  color="deep-purple"
                   text
                   link
                   :to="`/products/${product.id}`"

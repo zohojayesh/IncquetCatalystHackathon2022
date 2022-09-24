@@ -50,7 +50,7 @@
 
 
 #business-automation {
-    padding-top: 7em;
+    padding-top: 3em;
     background-image: url(https://res.cloudinary.com/incquet-solution/image/upload/v1664031747/Incquet%20website/New%20Website%20Design%20/Business_Proces-Bg_2x_uh2qkh.png);
     background-repeat: no-repeat;
     /* background-size: cover; */
@@ -60,8 +60,8 @@
 }
 .serv-exclaimIllus {
     right: 5%;
-    bottom: 15%;
-    width: 20%;
+    bottom: 7%;
+    width: 15%;
     position: absolute;
 }
 .serv-heartIllus {
@@ -93,8 +93,21 @@
 .v-sheet.v-card{
     z-index: 1;    
 }
-
-
+.proj_detail_tab{
+    background-color: #f7f6f9 !Important;
+}
+.proj_detail_tab.theme--light.v-tabs>.v-tabs-bar {
+    background-color: #f7f6f9 !Important;
+}
+.api-wrapperBox{
+    border: 1px solid #757575;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+.bord-rl{
+    border-left: 1px solid #232323;
+    border-right: 1px solid #232323;
+}
 @media only screen and (max-width: 768px) {
     .v-main__wrap {
         padding-top: 0.2em;
