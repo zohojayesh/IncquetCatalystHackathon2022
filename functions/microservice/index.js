@@ -65,7 +65,7 @@ app.post("/URL_Shortner",(req,res)=>{
 	const requestBody = req.body;
 	const baseUrl="https://incquet.com/to"
 	let urlCode = shortid.generate();
-    let shortUrl = baseUrl + "/:" + urlCode;
+    let shortUrl = baseUrl + "?c=" + urlCode;
 	let table = catalystApp.datastore().table('URL_Shortner');
 	let insertPromise = table.insertRow({
 		long_url: requestBody.long_url,
@@ -86,16 +86,17 @@ app.post("/URL_Shortner",(req,res)=>{
 
 })
 
-app.get("/getCode",(req,res)=>{
+app.post("/getCode",(req,res)=>{
 	
 	const searchData=req.body.code+"";
 	var catalystapp = catalyst.initialize(req);
+	console.log('req received',JSON.stringify(req.body));
 
 	console.log(searchData);
 	let config = {
-        search: `"${searchData}"`,
+        search: `${searchData}`,
         search_table_columns: {
-            "URL_Shortner": ["code","long_url","long_url2"]
+            "URL_Shortner": ["code","long_url"]
 		}
     };
 	console.log('search config',config);
@@ -111,6 +112,33 @@ app.get("/getCode",(req,res)=>{
 				res.status(404).json({status:"failure","message":"Invalid code"});
 			}
 	    });
+	  } catch (error) {
+		console.error(error);
+		return res.status(500).json({ status:"failure",message: "Some error has occurred" });
+	 }
+})
+
+
+app.post("/getCodeV2",(req,res)=>{
+	
+	const searchData=req.body.code+"";
+	var catalystapp = catalyst.initialize(req);
+	let zcql = catalystapp.zcql();
+	let query = `SELECT * FROM URL_Shortner where code = '${searchData}'`;
+	try {
+		let zcqlPromise = zcql.executeZCQLQuery(query);
+		zcqlPromise.then(queryResult => {
+			  console.log('queryResult',queryResult);
+			//  res.status(200).json({'queryResult':queryResult});
+
+			if(queryResult.length > 0){
+				res.status(200).json({status:"success","long_url":queryResult[0].URL_Shortner.long_url,"code":searchData});
+			}else{
+				res.status(404).json({status:"failure","message":"Invalid code"});
+			}
+
+		});	
+
 	  } catch (error) {
 		console.error(error);
 		return res.status(500).json({ status:"failure",message: "Some error has occurred" });
