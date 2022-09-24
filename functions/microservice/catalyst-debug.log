@@ -1,0 +1,54 @@
+[debug] [2022-09-24T08:22:46.761Z] : 
+[debug] [2022-09-24T08:22:46.762Z] : ----------------------------------------------------------------------
+[debug] [2022-09-24T08:22:46.762Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-09-24T08:22:46.762Z] : CLI Version:  1.12.1
+[debug] [2022-09-24T08:22:46.762Z] : Platform:     darwin
+[debug] [2022-09-24T08:22:46.762Z] : Node Version: v14.18.0
+[debug] [2022-09-24T08:22:46.767Z] : Time:         Sat Sep 24 2022 13:52:46 GMT+0530 (India Standard Time)
+[debug] [2022-09-24T08:22:46.767Z] : ----------------------------------------------------------------------
+[debug] [2022-09-24T08:22:46.767Z] : 
+[debug] [2022-09-24T08:22:47.237Z] : > authorizing via signed-in user option
+[debug] [2022-09-24T08:22:47.238Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-09-24T08:22:47.250Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+
+[debug] [2022-09-24T08:22:48.177Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 08:22:48 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=32be7526-844f-4766-b554-05bbaf656c1d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=32be7526-844f-4766-b554-05bbaf656c1d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T08:22:48.185Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
+
+[debug] [2022-09-24T08:22:49.133Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 08:22:49 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=003b5ecd-f073-4949-9125-756c29b03827;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=003b5ecd-f073-4949-9125-756c29b03827;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T08:22:49.267Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-09-24T08:22:51.448Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 24 Sep 2022 08:22:51 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=20f2879a-3f9d-48ad-9727-a53e65d2383e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=20f2879a-3f9d-48ad-9727-a53e65d2383e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-09-24T08:22:51.458Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-24T08:22:51.458Z] : unknown eol undefined hence skipping check
+[debug] [2022-09-24T08:22:51.472Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[info] [2022-09-24T08:22:51.639Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
+[info] [2022-09-24T08:22:51.639Z] : 
+[info] [2022-09-24T08:22:51.651Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:22:51.651Z] : 
+[info] [2022-09-24T08:23:04.109Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-24T08:23:04.146Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:23:04.147Z] : 
+[info] [2022-09-24T08:23:04.246Z] : ℹ server[microservice]: ready!
+[info] [2022-09-24T08:23:05.251Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-24T08:23:05.259Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:23:05.259Z] : 
+[info] [2022-09-24T08:23:05.365Z] : ℹ server[microservice]: ready!
+[info] [2022-09-24T08:23:52.661Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-24T08:23:52.685Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:23:52.686Z] : 
+[info] [2022-09-24T08:23:52.794Z] : ℹ server[microservice]: ready!
+[info] [2022-09-24T08:25:00.313Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-24T08:25:00.339Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-24T08:25:00.340Z] : 
+[info] [2022-09-24T08:25:00.446Z] : ℹ server[microservice]: ready!

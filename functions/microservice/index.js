@@ -2,7 +2,7 @@
 
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
-const shortid = require('shortid');
+// const shortid = require('shortid');
 const app = express();
 app.use(express.json());
 
@@ -60,61 +60,60 @@ app.get("/Anshu",(req,res)=>{
 	res.status(200).send("Hey I am Anshuman Yadav");
 })
 
-app.post("/URL_Shortner",(req,res)=>{
-	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
-	const requestBody = req.body;
-	const baseUrl="https://incquet.com/to"
-	let urlCode = shortid.generate();
-    let shortUrl = baseUrl + "/:" + urlCode;
-	let table = catalystApp.datastore().table('URL_Shortner');
-	let insertPromise = table.insertRow({
-		long_url: requestBody.long_url,
-		code: urlCode,
-		shortUrl:shortUrl,
-		SearchIndexedColumn: requestBody.id
-	});
-	insertPromise
-	.then((row) => {
-		console.log("\nInserted Row : " + JSON.stringify(row));
-		res.status(200).json(row);
-	})
-	.catch((err) => {
-		console.log(err);
-		res.status(500).send(err);
-	});
+// app.post("/URL_Shortner",(req,res)=>{
+// 	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
+// 	const requestBody = req.body;
+// 	const baseUrl="https://incquet.com/to"
+// 	let urlCode = shortid.generate();
+//     let shortUrl = baseUrl + "/:" + urlCode;
+// 	let table = catalystApp.datastore().table('URL_Shortner');
+// 	let insertPromise = table.insertRow({
+// 		long_url: requestBody.long_url,
+// 		code: urlCode,
+// 		shortUrl:shortUrl,
+// 		SearchIndexedColumn: requestBody.id
+// 	});
+// 	insertPromise
+// 	.then((row) => {
+// 		console.log("\nInserted Row : " + JSON.stringify(row));
+// 		res.status(200).json(row);
+// 	})
+// 	.catch((err) => {
+// 		console.log(err);
+// 		res.status(500).send(err);
+// 	});
 
 
-})
+// })
 
 app.get("/getCode",(req,res)=>{
 	
 	const searchData=req.body.code+"";
+	var catalystapp = catalyst.initialize(req);
+
 	console.log(searchData);
 	let config = {
-        search: "URL_Shortner*",
+        search: `"${searchData}"`,
         search_table_columns: {
-            urlCode: [searchData],          		
-			}
-    };
-	
-	try {
-		let search = app.search();  
-		let searchPromise = search.executeSearchQuery(config);
-		console.log(searchPromise);
-		const url= searchPromise.then(searchResult => {
-			console.log(searchResult);
-			res.status(200).send(searchResult)
-			//return searchResult;
-	    });		 
-		if (url) {
-		  console.log("Long url found for short url. Redirecting...");
-		  return res.redirect(url.long_url);
-		} else {
-		  return res.status(404).json({ message: "No url found" });
+            "URL_Shortner": ["code","long_url","long_url2"]
 		}
+    };
+	console.log('search config',config);
+	try {
+		let search = catalystapp.search();  
+		let searchPromise = search.executeSearchQuery(config);
+		searchPromise.then(searchResult => {
+			console.log('searchResult',searchResult);
+
+			if(searchResult && searchResult.URL_Shortner){
+				res.status(200).json({status:"success","long_url":searchResult.URL_Shortner[0].long_url,"code":searchData});
+			}else{
+				res.status(404).json({status:"failure","message":"Invalid code"});
+			}
+	    });
 	  } catch (error) {
 		console.error(error);
-		return res.status(500).json({ message: "Some error has occurred" });
+		return res.status(500).json({ status:"failure",message: "Some error has occurred" });
 	 }
 })
 
