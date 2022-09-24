@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
       <div class="heading"><h1> this is Subscription </h1> </div>
     <v-data-table
       :headers="headers"
@@ -8,7 +8,7 @@
       class="elevation-1"
       
     ></v-data-table>
-  </div>
+  </v-container>
 </template>
 
 <script>

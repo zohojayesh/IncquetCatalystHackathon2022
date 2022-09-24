@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <div class="heading"> <h1> All products </h1> </div>
     <v-row>
       <v-col cols="12" lg="12"
@@ -15,7 +15,7 @@
         <product-item :product="prod"></product-item>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>

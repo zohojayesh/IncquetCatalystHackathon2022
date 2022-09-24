@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <div class="heading"> <h1> This is Logs </h1> </div>
     <v-card>
       <v-card-title>
@@ -21,7 +21,7 @@
         hide-default-footer
       ></v-data-table>
     </v-card>
-  </div>
+  </v-container>
 </template>
 
 <script>
