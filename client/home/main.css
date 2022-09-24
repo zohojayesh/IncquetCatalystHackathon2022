@@ -46,3 +46,74 @@
     font-family: Overpass Mono,monospace;  
     margin-bottom: 7px !important; 
 }
+
+
+#business-automation {
+    padding-top: 7em;
+    background-image: url(https://res.cloudinary.com/incquet-solution/image/upload/v1664031747/Incquet%20website/New%20Website%20Design%20/Business_Proces-Bg_2x_uh2qkh.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 50%; 
+    position: relative;
+    
+}
+.serv-exclaimIllus {
+    right: 5%;
+    bottom: 15%;
+    width: 20%;
+    position: absolute;
+}
+.serv-heartIllus {
+    position: absolute;
+    left: 5%;
+    top: -4%;
+    width: 12%;
+}
+.business-auto {
+    position: relative;
+    padding: 4em;
+}
+#business-automation h1 {
+    color: #121F63;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 1.3;
+    margin: 0.5em 0px;
+    font-family: 'Roboto', sans-serif;
+}
+#business-automation p {
+    color: #232323;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 1em;
+    margin-top: 0px;
+    padding-right: 3em;
+}
+@media only screen and (max-width: 768px) {
+    .v-main__wrap {
+        padding-top: 0.2em;
+    }
+    .heading h1{
+        margin: 0.3em 9px 0.5em;
+    }
+    .home, .logs, .subscription, .product{
+        display: none;
+    }
+    .code-snippetWrapper {
+        margin: 2px 0.5em 17px;
+    }
+    .code-snippetArea{
+        padding: 0.4em 0.2em;
+    }
+    .code-snippetWrapper pre {
+        padding: 1em 0.4em;
+        font-size: 13px;
+    }
+    .monospace-text {
+        font-size: 12px!important;
+        margin-bottom: 5px !important;
+    }
+    .v-card__subtitle, .v-card__text, .v-card__title {
+        padding: 13px;
+    }
+}

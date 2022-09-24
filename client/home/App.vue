@@ -3,7 +3,7 @@
       <nav-bar></nav-bar>
       <!-- Sizes your content based upon application components -->
       <v-main>
-        <v-container>
+        
           <!-- Provides the application the proper gutter -->
           <!-- <task-kanban :key="componentKey"></task-kanban> -->
           <router-view></router-view>
@@ -11,7 +11,7 @@
           <pre>
             {{user}}
           </pre> -->
-          </v-container>
+          
       </v-main>
   </v-app>
 </template>
