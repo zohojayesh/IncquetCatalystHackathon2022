@@ -14,9 +14,10 @@
         <v-card-text>
             <p class="monospace-text">
                 POST 
-                <span class="blue-grey--text">
-                    //v2.convertapi.com/convert/heic/to/jpg?Secret=< YOUR SECRET HERE > 
-                </span> </p>
+                <span class="blue-grey--text" ref="body_code_ref">
+                    //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt;
+                </span> 
+            </p>
             <p class="monospace-text">
                 <span class="indigo--text"> 
                     Content-Type:</span> application/json</p>
@@ -34,8 +35,11 @@
             </v-card-text> -->
             <div class="code-snippetWrapper">
                 <div class="code-snippetArea">
-                    <v-btn class="blue-grey--text" text link absolute right><v-icon> mdi-content-copy </v-icon></v-btn>
-                <pre>{
+                    <v-btn :loading="selectedElement=='header' && loading" @click="copyCode('header')" 
+                    :class="{'green--text lighten-2':selectedElement=='header' && !loading,'blue-grey--text':selectedElement!='header'}" text link absolute right>
+                        <v-icon> {{selectedElement=='header'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
+                    </v-btn>
+                <pre ref="header_code_ref">{
 content-type:"application-json"
 }</pre>
             </div>
@@ -47,8 +51,9 @@ content-type:"application-json"
         
             <div class="code-snippetWrapper">
                 <div class="code-snippetArea">
-                    <v-btn class="blue-grey--text" text link absolute right><v-icon> mdi-content-copy </v-icon></v-btn>
-                <pre>{
+                    <v-btn :loading="selectedElement=='body' && loading" @click="copyCode('body')" 
+                    :class="{'green--text lighten-2':selectedElement=='body' && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement=='body'?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon></v-btn>
+                <pre ref='body_code_ref'>{
 content-type:"application-json"
 }</pre>
                 </div>
@@ -61,6 +66,23 @@ content-type:"application-json"
 <script>
 module.exports = {
     props:['product'],
+    data(){
+        return{
+            selectedElement :null,
+            loading:false,
+            
+        }
+    },
+    methods:{
+        copyCode(element){
+            this.loading=true;
+            this.selectedElement=element;
+            var code = this.$refs[element+'_code_ref'].innerHTML;
+            const clipboardData =  window.clipboardData ||  navigator.clipboard;
+            clipboardData.writeText(code);            
+            setTimeout(()=>{this.loading=false;},1000);
+        }
+    }
 }
 </script>
 
