@@ -93,8 +93,21 @@
 .v-sheet.v-card{
     z-index: 1;    
 }
-
-
+.proj_detail_tab{
+    background-color: #f7f6f9 !Important;
+}
+.proj_detail_tab.theme--light.v-tabs>.v-tabs-bar {
+    background-color: #f7f6f9 !Important;
+}
+.api-wrapperBox{
+    border: 1px solid #232323;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+.bord-rl{
+    border-left: 1px solid #232323;
+    border-right: 1px solid #232323;
+}
 @media only screen and (max-width: 768px) {
     .v-main__wrap {
         padding-top: 0.2em;
