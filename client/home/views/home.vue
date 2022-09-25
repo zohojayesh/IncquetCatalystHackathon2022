@@ -97,14 +97,13 @@
                             <v-col>
                                 <v-card>
                                     <v-card-title>
-                                    Recent Logs
-                                    <v-spacer></v-spacer>
-                                   
+                                        Recent Logs
+                                        <v-spacer></v-spacer>
                                     </v-card-title>
                                     <v-data-table
+                                    :loading="loading"
                                     :headers="headers"
-                                    :items="desserts"
-                                    :sort-by="['calories', 'fat']"
+                                    :items="log_list"
                                     hide-default-footer
                                     ></v-data-table>
                                 </v-card>
@@ -116,44 +115,53 @@
         </div>  <!-- business-automation -->
     </div>
 </template>
-<script>
-module.exports={
-
+<script>module.exports= {
   data(){
     return {
+        loading: false,
         search: '',
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'User',
             align: 'start',
             sortable: false,
-            value: 'name',
+            value: 'user_id',
           },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' },
+          { text: 'Subscription', value: 'subscription_id' },
+          { text: 'Product', value: 'product_id' },
+          { text: 'Meta', value: 'meta' },
+          { text: 'Status', value: 'status' },
+          { text: 'Added Date', value: 'CREATEDTIME' },
         ],
-        desserts: [
-          {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%',
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%',
-          },
-        ],
+        log_list: [],
       }
+    },
+     methods:{
+      fetchLogs(hasNext = true, next_token = undefined){
+        if (!hasNext) {
+            return;
+        } 
+        this.loading = true;
+        var datastore = catalyst.table;
+        var table = datastore.tableId('Logs');
+        table
+        .getPagedRows({ next_token, max_rows: 5 })
+        .then(resp => {
+                console.log('logList : ', resp.content);
+                this.log_list = resp.content;
+                this.$root.log_list = this.log_list;
+                return this.fetchLogs(resp.more_records, resp.next_token);
+            })
+            .catch((err) => {
+                console.log(err.toString());
+            }).finally(()=>{
+              this.loading=false;
+            });
+      },
+     
+    },
+    created(){
+      this.fetchLogs();
     },
 }
 </script>
