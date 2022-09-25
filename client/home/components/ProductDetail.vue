@@ -3,7 +3,10 @@
     <v-card elevation="2" class="code-snippets">
         <v-card-title>
             {{product.name}}
-            <v-btn class="red--text" text link absolute right>Subscribe</v-btn>
+            <v-btn :loading="subscribeLoading" @click="subscribe()" :class="{'green--text':!!subscription_id,'red--text':!subscription_id}" text link absolute right>
+                <v-icon v-if="subscription_id">mdi-check-all</v-icon>
+                {{subscription_id?'Subscribed':'Subscribe'}}
+            </v-btn>
         </v-card-title>
         <v-card-subtitle class="pt-2 pb-2">
             {{product.short_description}}
@@ -101,7 +104,8 @@ module.exports = {
         return{
             selectedElement :null,
             loading:false,
-            
+            subscribeLoading:false,
+            subscription_id:null
         }
     },
     methods:{
@@ -112,7 +116,24 @@ module.exports = {
             const clipboardData =  window.clipboardData ||  navigator.clipboard;
             clipboardData.writeText(code);            
             setTimeout(()=>{this.loading=false;},1000);
+        },
+        subscribe(){
+            this.subscribeLoading = true;
+            //
+            var details = [{"user_id": 000, "product_id": this.product.id,'product_name':this.product.name}];
+            var datastore = catalyst.table;
+            var table = datastore.tableId('Subscription'); //Provide the table ID or table name to insert the rows in
+            table.addRow(details)
+            .then((response) => {
+                this.subscription_id = response.content[0].ROWID;
+                console.log(response.content,'sub id',this.subscription_id);
+            }).catch((err) => {
+                console.log(err);
+            }).finally(()=>{
+                this.subscribeLoading = false;
+            });
         }
+
     },
     filters:{
         formatjson(v){
