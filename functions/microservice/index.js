@@ -27,8 +27,9 @@ app.post("/URL_Shortner",(req,res)=>{
 	});
 	insertPromise
 	.then((row) => {
-		console.log("\nInserted Row : " + JSON.stringify(row));
-		res.status(200).json(row);
+		let resp = {...row,"status":"success"};
+		console.log("\nInserted Row : " + JSON.stringify(resp));
+		res.status(200).json(resp);
 		log.status = 'status';
 		log.meta = JSON.stringify(row);
 	})
@@ -154,7 +155,7 @@ function createLog(datastore,product_id,subscription_id,log){
         status: log.status,
 		meta:log.meta
     };
-	
+
 	console.log('logInsertPayload',rowData);
     //Use the table meta object to insert the row which returns a promise
     let table = datastore.table('Logs');
