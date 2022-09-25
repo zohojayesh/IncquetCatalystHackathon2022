@@ -8,7 +8,7 @@
       <template v-slot:prepend>
         <v-list-item two-line>
           <v-list-item-avatar>
-            <img src="https://randomuser.me/api/portraits/women/81.jpg">
+            <img src="https://res.cloudinary.com/incquet-solution/image/upload/v1574328392/default_avatar_m3t9p8.png">
           </v-list-item-avatar>
 
           <v-list-item-content>
