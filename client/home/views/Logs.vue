@@ -57,7 +57,7 @@ module.exports= {
         } 
         this.loading = true;
         var datastore = catalyst.table;
-        var table = datastore.tableId('Subscription');
+        var table = datastore.tableId('Logs');
         table
         .getPagedRows({ next_token, max_rows: 100 })
         .then(resp => {
