@@ -38,7 +38,8 @@
                     <v-col md="10" class="text-left">
                         <p class="monospace-text ma-0">
                             <span class="blue-grey--text" ref="endpoint_code_ref">
-                                //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt;
+                                {{product.endpoint}}
+                                <!-- //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt; -->
                             </span> 
                         </p>
                     </v-col>
