@@ -3,7 +3,9 @@
     "targets": [
       "hackathon_2022_function",
       "microservice",
-      "addLog"
+      "addLog",
+      "subscribe",
+      "googledrive"
     ],
     "ignore": [],
     "source": "functions"

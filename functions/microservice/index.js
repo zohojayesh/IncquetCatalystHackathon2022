@@ -3,6 +3,9 @@
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
 const shortid = require('shortid');
+const getCSV = require('get-csv');
+
+
 const app = express();
 app.use(express.json());
 
@@ -107,17 +110,52 @@ app.all("/", (req,res) => {
 
 });
 
+app.post("/csv2json",(req,res)=>{
+
+	const csv_url = req.body.csv_url;
+	const csv_header = req.body.header;
+    console.log('received csv_url : ',csv_url);
+	var log= {};
+	log.meta ={'csv_url':csv_url};
+
+	if(!csv_url){
+		log.status = 'failure';
+	    res.send({"status":'failure',"error":'no url passed'});
+		return;
+	}
+
+    getCSV(csv_url,{headers: csv_header})
+    .then(rows => {
+        res.send({"status":'success',"data":rows});
+		log.status = 'success';
+		log.meta.message = `${rows.length} rows fetched`;
+    }).catch(e => {
+        res.send({"status":'failure',"error":e});
+		log.status = 'failure';
+		log.meta.error = e;
+        console.log('error :',e);
+    }).finally(()=>{
+		console.log('log object : ',log);
+		let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
+		let datastore = catalystApp.datastore();
+		createLog(datastore,1,2,log);
+	});
+
+})
+
+
 function createLog(datastore,product_id,subscription_id,log){
 	//Create Configuration for function Execution
 
 	let rowData = 
-    { 
+    {
         product_id: product_id,
         subscription_id: subscription_id,
-        Status: log.status,
-		Meta:log.meta
+        status: log.status,
+		meta:log.meta
     };
-	console.log('logInserPayload',rowData);
+	
+	console.log('logInsertPayload',rowData);
     //Use the table meta object to insert the row which returns a promise
     let table = datastore.table('Logs');
     let insertPromise = table.insertRow(rowData);
