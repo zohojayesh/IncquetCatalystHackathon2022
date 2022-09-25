@@ -6,7 +6,6 @@
       :headers="headers"
       :items="subscription_list"
       class="elevation-1"
-      hide-default-footer
     >
     <template v-slot:item.actions="{ item }">
       <v-btn

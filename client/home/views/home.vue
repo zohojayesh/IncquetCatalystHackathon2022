@@ -22,7 +22,7 @@
                                     </v-col>
                                     <v-col md="6">
                                         <v-card-title class="text-h5 pa-1">
-                                            1232
+                                            2
                                         </v-card-title>
                                     </v-col>
                                 </v-row>
@@ -50,7 +50,7 @@
                                         </v-col>
                                         <v-col md="6">
                                             <v-card-title class="text-h5 pa-1">
-                                                1232
+                                                12
                                             </v-card-title>
                                         </v-col>
                                     </v-row>
@@ -76,7 +76,7 @@
                                     </v-col>
                                     <v-col md="6">
                                         <v-card-title class="text-h5 pa-1">
-                                            1232
+                                            6
                                         </v-card-title>
                                     </v-col>
                                 </v-row>

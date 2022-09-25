@@ -38,7 +38,7 @@
                     <v-col md="10" class="text-left">
                         <p class="monospace-text ma-0">
                             <span class="blue-grey--text" ref="endpoint_code_ref">
-                                {{product.endpoint}}
+                                {{product.endpoint}}?<span class="indigo--text">subscription_id={{subscription_id?subscription_id:'&lt; your subscription id here &gt;'}}</span>
                                 <!-- //v2.convertapi.com/convert/heic/to/jpg?Secret=&lt; YOUR SECRET HERE &gt; -->
                             </span> 
                         </p>
