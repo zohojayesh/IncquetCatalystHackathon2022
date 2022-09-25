@@ -58,18 +58,30 @@
     background-position: left bottom;
     
 }
-.serv-exclaimIllus {
-    right: 5%;
-    bottom: 10%;
-    width: 15%;
+.serv-apiIllus {
     position: absolute;
-}
-.serv-heartIllus {
-    position: absolute;
-    left: 5%;
-    top: -4%;
+    left: 2%;
+    top: 3%;
     width: 12%;
 }
+.serv-jsIllus {
+    position: absolute;
+    left: 7%;
+    top: 60%;
+    width: 12%;
+}
+.serv-exclaimIllus {
+    right: 1%;
+    top: 15%;
+    width: 8%;
+    position: absolute;
+}
+.serv-creatorIllus{
+    position: absolute;
+    right: 8%;
+    bottom: 6%;
+    width: 15%;
+    }
 .business-auto {
     position: relative;
     padding: 4em;
@@ -107,6 +119,10 @@
 .bord-rl{
     border-left: 1px solid #232323;
     border-right: 1px solid #232323;
+}
+.v-data-table {
+    z-index: 1;
+    position: relative;
 }
 @media only screen and (max-width: 768px) {
     .v-main__wrap {

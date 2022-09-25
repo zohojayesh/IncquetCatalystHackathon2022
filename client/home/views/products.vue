@@ -15,6 +15,10 @@
         <product-item :product="prod"></product-item>
       </v-col>
     </v-row>
+    <img class="serv-apiIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031801/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Api_2x_i8ziui.png">
+    <img class="serv-jsIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031778/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Js_2x_nd547u.png">
+      <img class="serv-exclaimIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031790/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Exclaim_2x_wnjdag.png">
+      <img class="serv-creatorIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664109540/Incquet%20website/New%20Website%20Design%20/Icon-Bg-ZohoC_2x_tj3gdn.png">
   </v-container>
 </template>
 

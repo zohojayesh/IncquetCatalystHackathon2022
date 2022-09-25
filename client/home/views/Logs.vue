@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <div class="heading"> <h1> This is Logs </h1> </div>
+    <div class="heading"> <h1> My Logs </h1> </div>
     <v-card>
       <v-card-title>
-        My Logs
+        
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
@@ -14,13 +14,17 @@
         ></v-text-field>
       </v-card-title>
       <v-data-table
+        :loading="loading"
         :headers="headers"
-        :items="desserts"
+        :items="log_list"
         :search="search"
-        :sort-by="['calories', 'fat']"
+        :sort-by="['Subscription', 'subscription_id']"
         hide-default-footer
       ></v-data-table>
     </v-card>
+    <img class="serv-apiIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031801/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Api_2x_i8ziui.png" >
+      <img class="serv-exclaimIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031778/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Js_2x_nd547u.png">
+      <img class="serv-creatorIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664109540/Incquet%20website/New%20Website%20Design%20/Icon-Bg-ZohoC_2x_tj3gdn.png">
   </v-container>
 </template>
 
@@ -28,39 +32,50 @@
 module.exports= {
   data(){
     return {
+        loading: false,
         search: '',
         headers: [
           {
-            text: 'Dessert (100g serving)',
+            text: 'User',
             align: 'start',
             sortable: false,
-            value: 'name',
+            value: 'user_id',
           },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' },
+          { text: 'Subscription', value: 'subscription_id' },
+          { text: 'Product', value: 'product_id' },
+          { text: 'Meta', value: 'meta' },
+          { text: 'Status', value: 'status' },
+          { text: 'Added Date', value: 'CREATEDTIME' },
         ],
-        desserts: [
-          {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%',
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%',
-          },
-        ],
+        log_list: [],
       }
+    },
+     methods:{
+      fetchLogs(hasNext = true, next_token = undefined){
+        if (!hasNext) {
+            return;
+        } 
+        this.loading = true;
+        var datastore = catalyst.table;
+        var table = datastore.tableId('Subscription');
+        table
+        .getPagedRows({ next_token, max_rows: 100 })
+        .then(resp => {
+                console.log('logList : ', resp.content);
+                this.log_list = resp.content;
+                this.$root.log_list = this.log_list;
+                return this.fetchLogs(resp.more_records, resp.next_token);
+            })
+            .catch((err) => {
+                console.log(err.toString());
+            }).finally(()=>{
+              this.loading=false;
+            });
+      },
+     
+    },
+    created(){
+      this.fetchLogs();
     },
 }
 </script>

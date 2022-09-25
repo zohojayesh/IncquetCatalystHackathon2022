@@ -1,19 +1,11 @@
 <template>
     <div class="heading">
-        
         <!-- <h1>this will be the home page</h1>  -->
-        <section id="business-automation">
+        <div id="business-automation">
             <div class="container">
-                
-                <div class="row align-items-center">
-                    <!-- <div class="business-auto">
-                        <h1> Business Process Automation </h1>
-                        <p> We Specialize In End To End Business Process Automation on Zoho Creator </p>
-                    </div> -->
-                    <div class="col-lg-5 col-md-5 col-12">
-                        <!-- <img src="https://res.cloudinary.com/incquet-solution/image/upload/v1664104796/Incquet%20website/New%20Website%20Design%20/Groupopac_kdytae.png" width="100%"> -->
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-12">
+                <v-row>
+                    <v-col md="5" sm="12"> </v-col>
+                    <v-col md="7" sm="12">
                         <v-row>
                             <v-col md="4" sm="4">
                                 <v-card
@@ -97,8 +89,9 @@
                                 </v-card>
                             </v-col>
                         </v-row>
-                        <img class="serv-heartIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031801/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Api_2x_i8ziui.png" >
+                        <img class="serv-apiIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031801/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Api_2x_i8ziui.png" >
                         <img class="serv-exclaimIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664031790/Incquet%20website/New%20Website%20Design%20/Icon-Bg-Exclaim_2x_wnjdag.png">
+                        <img class="serv-creatorIllus" src="https://res.cloudinary.com/incquet-solution/image/upload/v1664109540/Incquet%20website/New%20Website%20Design%20/Icon-Bg-ZohoC_2x_tj3gdn.png">
 
                         <v-row class="mt-3">
                             <v-col>
@@ -111,24 +104,18 @@
                                     <v-data-table
                                     :headers="headers"
                                     :items="desserts"
-                                    
                                     :sort-by="['calories', 'fat']"
                                     hide-default-footer
                                     ></v-data-table>
                                 </v-card>
                             </v-col>
-                        </div>
-                    </div> <!-- col-7 -->
-                    
-                </div>
+                        </v-row>
+                    </v-col> <!-- col-7 -->
+                </v-row>
             </div>
-        </section>  <!-- business-automation -->
-
-
+        </div>  <!-- business-automation -->
     </div>
-
 </template>
-
 <script>
 module.exports={
 
