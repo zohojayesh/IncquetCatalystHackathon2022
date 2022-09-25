@@ -11,9 +11,12 @@
             <img src="https://res.cloudinary.com/incquet-solution/image/upload/v1574328392/default_avatar_m3t9p8.png">
           </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title> Jane Smith </v-list-item-title>
-            <v-list-item-subtitle> Logged In </v-list-item-subtitle>
+          <v-list-item-content v-if="user">
+            <v-list-item-title> {{user.first_name}} {{user.last_name}} </v-list-item-title>
+            <v-list-item-subtitle>{{user.email_id}} </v-list-item-subtitle>
+          </v-list-item-content>
+          <v-list-item-content v-else>
+            <v-list-item-subtitle>loading user ...</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </template>
@@ -64,6 +67,8 @@
             color="deep-purple"
             dark
             block
+            :loading="loading"
+            @click="logout()"
             >
             Logout
             </v-btn>
@@ -77,9 +82,34 @@ module.exports= {
   props:['drawer'],
     data () {
       return {
-        
+        user:{},
+        loading:false
       }
     },
+    created(){
+        this.getUser();
+    },
+    methods:{
+      logout(){
+        this.loading=true;
+        //Configure the redirect url after successful logout
+        var redirectURL = "/";
+        //Use the redirect url and call the method to sign out 
+        var auth = catalyst.auth;
+        auth.signOut(redirectURL);
+      },
+      getUser(){
+        catalyst.auth.isUserAuthenticated().then(result => {
+            console.log('result',result);
+            this.user = result.content;
+            this.$root.user= this.user;
+        }).catch(err => {
+            console.log('error ',err);
+            console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');
+        });
+
+    }
+    }
 }
 </script>
 
