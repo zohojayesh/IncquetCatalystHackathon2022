@@ -138,9 +138,9 @@
     },
      methods:{
       fetchLogs(hasNext = true, next_token = undefined){
-        if (!hasNext) {
-            return;
-        } 
+        // if (!hasNext) {
+        //     return;
+        // } 
         this.loading = true;
         var datastore = catalyst.table;
         var table = datastore.tableId('Logs');
@@ -150,7 +150,8 @@
                 console.log('logList : ', resp.content);
                 this.log_list = resp.content;
                 this.$root.log_list = this.log_list;
-                return this.fetchLogs(resp.more_records, resp.next_token);
+                return resp.content;
+                // return this.fetchLogs(resp.more_records, resp.next_token);
             })
             .catch((err) => {
                 console.log(err.toString());
