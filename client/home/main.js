@@ -15,15 +15,23 @@ const router = new VueRouter({
     routes // short for `routes: routes`
 });
 
+try{
+    let resp = await catalyst.auth.isUserAuthenticated();
+    window.loginUser = resp.content;
+}catch(e){
+    window.loginUser = null;
+}
 
+console.log('main.js',window.loginUser);
 try{
 
 router.beforeEach((to, from, next) => {
     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-    if (requiresAuth){
-        catalyst.auth.isUserAuthenticated()
-        .then(()=>next())
-        .catch(()=>document.location.href = "../index.html");
+    if (requiresAuth && !window.loginUser){
+        // catalyst.auth.isUserAuthenticated()
+        // .then(()=>next())
+        // .catch(()=>document.location.href = "../index.html");
+        document.location.href = "../index.html";
     }else{
         next();
     }
@@ -43,14 +51,17 @@ var app = new Vue({
     pinia: Pinia.createPinia(),
     components:{'App':httpVueLoader('./App.vue')},
     computed: {
-        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded'])
+        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded','user'])
     },
     methods: {
-        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs'])
+        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs','getUser'])
     },
     created(){
         console.log("vue app initialised");
+        this.getUser()
+        .then(()=>{
+            this.getSubs();
+        });
         this.getProdsV2();
-        this.getSubs();
     }
 });

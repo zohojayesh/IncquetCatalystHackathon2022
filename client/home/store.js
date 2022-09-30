@@ -4,7 +4,8 @@ const useCounterStore = Pinia.defineStore('counter', {
         value: 0,
         product_list:[],
         subscription_list:[],
-        loaded:false
+        loaded:false,
+        user:null
       }
     },
     actions: {
@@ -60,7 +61,6 @@ const useCounterStore = Pinia.defineStore('counter', {
           console.log('error getProdsV2',e);
         })
       },
-
       getSubs(){
         
         this.runQuery('SELECT * FROM Subscription where user_id=0','Subscription')
@@ -72,6 +72,22 @@ const useCounterStore = Pinia.defineStore('counter', {
         }).catch(e=>{
           console.log('error getSubs',e);
         })
+
+      },
+      getUser(){
+        //Get the details of the current user
+        var userManagement = catalyst.userManagement;
+        return userManagement.getCurrentProjectUser()
+        .then((response) => {
+            console.log(response.content);
+            this.user =response.content;
+            this.loaded = true;
+            return this.user;
+        })
+        .catch((err) => {
+            console.log('err in getUser',err);
+            return err;
+        });
 
       }
     }

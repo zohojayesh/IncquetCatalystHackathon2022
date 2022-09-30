@@ -95,6 +95,7 @@ module.exports= {
         //Configure the redirect url after successful logout
         var redirectURL = "/";
         //Use the redirect url and call the method to sign out 
+        window.loginUser = null;
         var auth = catalyst.auth;
         auth.signOut(redirectURL);
       },

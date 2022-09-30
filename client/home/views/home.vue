@@ -101,10 +101,7 @@
                                         <v-spacer></v-spacer>
                                     </v-card-title>
                                     <!-- <v-card-text>
-                                        $root products : 
-                                        <pre>
-                                            {{productList}}
-                                        </pre>
+                                        {{user}}
                                     </v-card-text> -->
                                     <v-data-table
                                     :loading="loading"
@@ -170,6 +167,9 @@
     computed:{
         productList(){
             return this.$root.product_list;
+        },
+        user(){
+            return this.$root.user;
         }        
     },
     created(){

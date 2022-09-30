@@ -8,9 +8,9 @@
                 {{subscription_id?'Subscribed':'Subscribe'}}
             </v-btn>
         </v-card-title>
-        <v-card-subtitle class="pt-2 pb-2">
+        <!-- <v-card-subtitle class="pt-2 pb-2">
             {{product.short_description}}
-        </v-card-subtitle>
+        </v-card-subtitle> -->
         <v-card-text class="pb-2">
             {{product.long_description}}
         </v-card-text>
@@ -145,6 +145,8 @@ module.exports = {
 }
 </script>
 
-<style>
-
+<style scoped>
+.green--text{
+    color:#008000a8 !important;
+}
 </style>
