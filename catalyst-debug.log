@@ -179,3 +179,14 @@ change of index.js in microservice detected. Preparing your function, please wai
 [info] [2022-09-30T01:43:09.590Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
 [info] [2022-09-30T01:43:09.590Z] : 
 [info] [2022-09-30T01:43:09.696Z] : ℹ server[microservice]: ready!
+[debug] [2022-09-30T01:44:17.234Z] : > refreshing access token <
+[debug] [2022-09-30T01:44:17.239Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-30T01:44:18.100Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 01:44:18 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=106d6440-6878-4b8a-b6d6-05eb3599d506;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=106d6440-6878-4b8a-b6d6-05eb3599d506;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-09-30T01:46:30.483Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-30T01:47:09.831Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.
+[info] [2022-09-30T01:48:33.793Z] : Change(s) is detected in home/components/Sidenav.vue of the Web-Client.
+[info] [2022-09-30T01:48:50.718Z] : Change(s) is detected in home/components/Nav.vue of the Web-Client.

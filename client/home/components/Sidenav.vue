@@ -1,6 +1,6 @@
 <template>
  <v-navigation-drawer
-    v-model="drawer"
+    v-model="draw"
       absolute
       temporary
       left
@@ -109,7 +109,18 @@ module.exports= {
         });
 
     }
-    }
+    },
+    computed:{
+      draw:{
+        get(){
+          return this.drawer
+        },
+        set(v){
+          if(!v) this.$emit('close');
+        }
+      }
+  }
+    
 }
 </script>
 
