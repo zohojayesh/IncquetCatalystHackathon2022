@@ -194,3 +194,10 @@ Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 01:44:18 GMT","conten
 [info] [2022-09-30T01:55:00.869Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
 [error] [2022-09-30T01:55:51.633Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue
 [debug] [2022-09-30T01:55:51.635Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue'
+[info] [2022-09-30T02:11:02.611Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:12:06.315Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:12:23.200Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:13:42.064Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:13:52.195Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:14:00.550Z] : Change(s) is detected in index.html of the Web-Client.
+[info] [2022-09-30T02:14:41.012Z] : Change(s) is detected in index.html of the Web-Client.
