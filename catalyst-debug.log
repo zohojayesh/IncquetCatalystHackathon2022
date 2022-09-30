@@ -173,3 +173,9 @@ Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 00:43:02 GMT","conten
 [info] [2022-09-30T01:35:13.372Z] : Change(s) is detected in home/views/Subscriptions.vue of the Web-Client.
 [info] [2022-09-30T01:36:40.775Z] : Change(s) is detected in home/views/Subscriptions.vue of the Web-Client.
 [info] [2022-09-30T01:36:46.403Z] : Change(s) is detected in home/views/Subscriptions.vue of the Web-Client.
+[info] [2022-09-30T01:42:14.343Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-30T01:43:09.247Z] : 
+change of index.js in microservice detected. Preparing your function, please wait...
+[info] [2022-09-30T01:43:09.590Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-09-30T01:43:09.590Z] : 
+[info] [2022-09-30T01:43:09.696Z] : ℹ server[microservice]: ready!

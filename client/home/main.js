@@ -18,16 +18,16 @@ const router = new VueRouter({
 
 try{
 
-// router.beforeEach((to, from, next) => {
-//     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-//     if (requiresAuth){
-//         catalyst.auth.isUserAuthenticated()
-//         .then(()=>next())
-//         .catch(()=>document.location.href = "../index.html");
-//     }else{
-//         next();
-//     }
-// });
+router.beforeEach((to, from, next) => {
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    if (requiresAuth){
+        catalyst.auth.isUserAuthenticated()
+        .then(()=>next())
+        .catch(()=>document.location.href = "../index.html");
+    }else{
+        next();
+    }
+});
 
 }catch(e){
     console.log('error in route guard',e);
