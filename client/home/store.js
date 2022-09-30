@@ -5,7 +5,8 @@ const useCounterStore = Pinia.defineStore('counter', {
         product_list:[],
         subscription_list:[],
         loaded:false,
-        user:null
+        user:null,
+        logs:[]
       }
     },
     actions: {
@@ -62,8 +63,8 @@ const useCounterStore = Pinia.defineStore('counter', {
         })
       },
       getSubs(){
-        
-        this.runQuery('SELECT * FROM Subscription where user_id=0','Subscription')
+        if(!this.user) return;
+        this.runQuery(`SELECT * FROM Subscription where user_id=${this.user.user_id}`,'Subscription')
         .then(data=>{
 
           this.subscription_list = data;
@@ -88,6 +89,20 @@ const useCounterStore = Pinia.defineStore('counter', {
             console.log('err in getUser',err);
             return err;
         });
+
+      },
+      getLogs(sub_id){
+        //where user_id=${this.user.user_id}2
+        let query = 'SELECT * FROM Logs' + (sub_id?` where subscription_id=${sub_id}`:'');
+        console.log('logs query',query);
+        return this.runQuery(query,'Logs')
+        .then(data=>{
+          this.logs = data;          
+          return this.logs;
+        }).catch(e=>{
+          console.log('error getLogs',e);
+          return e;
+        })
 
       }
     }

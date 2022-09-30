@@ -16,7 +16,7 @@
       <v-data-table
         :loading="loading"
         :headers="headers"
-        :items="log_list"
+        :items="logs"
         :search="search"
         :sort-by="['Subscription', 'subscription_id']"
         hide-default-footer
@@ -74,8 +74,15 @@ module.exports= {
       },
      
     },
+    computed:{
+      logs(){
+        return this.$root.logs;
+      }
+    },
     created(){
-      this.fetchLogs();
+      this.loading = true;
+      this.$root.getLogs()
+      .finally(()=>{this.loading=false});
     },
 }
 </script>

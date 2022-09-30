@@ -103,7 +103,6 @@ module.exports= {
         catalyst.auth.isUserAuthenticated().then(result => {
             console.log('result',result);
             this.user = result.content;
-            this.$root.user= this.user;
         }).catch(err => {
             console.log('error ',err);
             console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');

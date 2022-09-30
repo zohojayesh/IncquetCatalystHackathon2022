@@ -51,10 +51,10 @@ var app = new Vue({
     pinia: Pinia.createPinia(),
     components:{'App':httpVueLoader('./App.vue')},
     computed: {
-        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded','user'])
+        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded','user','logs'])
     },
     methods: {
-        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs','getUser'])
+        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs','getUser','getLogs'])
     },
     created(){
         console.log("vue app initialised");

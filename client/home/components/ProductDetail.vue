@@ -120,8 +120,9 @@ module.exports = {
         subscribe(){
             
             this.subscribeLoading = true;
+            let user = this.$root.user;
             //
-            var details = [{"user_id": 000, "product_id": this.product.id,'product_name':this.product.name}];
+            var details = [{"user_id": user.user_id, "product_id": this.product.id,'product_name':this.product.name}];
             var datastore = catalyst.table;
             var table = datastore.tableId('Subscription'); //Provide the table ID or table name to insert the rows in
             table.addRow(details)
