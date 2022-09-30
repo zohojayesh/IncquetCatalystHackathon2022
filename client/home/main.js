@@ -5,6 +5,7 @@ const routes = [
     { name:'product_details',path: '/products/:id', component: httpVueLoader('./views/ProductDetailPage.vue'),meta: { requiresAuth: true },props: true },
     { name:'subscriptions',path: '/subscriptions', component: httpVueLoader('./views/Subscriptions.vue'),meta: { requiresAuth: true } },
     { name:'logs',path: '/logs', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } },
+    { name:'logs_filter',path: '/logs/:sub_id', component: httpVueLoader('./views/Logs.vue'),meta: { requiresAuth: true } },
     { name:'default',path: '*', component: httpVueLoader('./views/Home.vue'),meta: { requiresAuth: true}}
 
   ];

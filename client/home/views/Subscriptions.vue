@@ -74,7 +74,7 @@ module.exports= {
         // this.editedIndex = this.subscription_list.indexOf(item)
         // this.editedItem = Object.assign({}, item)
         console.log('item clicked',item);
-        this.$router.push({path:'/logs'});
+        this.$router.push({path:`/logs/${item.ROWID}`});
       },
     },
     computed:{

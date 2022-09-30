@@ -77,3 +77,98 @@ Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 16:15:09 GMT","conten
 [info] [2022-09-30T16:49:32.570Z] : Change(s) is detected in home/store.js of the Web-Client.
 [info] [2022-09-30T16:50:46.393Z] : Change(s) is detected in home/store.js of the Web-Client.
 [info] [2022-09-30T16:53:09.269Z] : Change(s) is detected in home/App.vue of the Web-Client.
+[info] [2022-09-30T16:57:45.779Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-30T16:57:53.810Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-30T16:59:52.244Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:00:32.072Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/1
+[debug] [2022-09-30T17:00:32.073Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/1'
+[info] [2022-09-30T17:01:22.339Z] : Change(s) is detected in home/views/Subscriptions.vue of the Web-Client.
+[info] [2022-09-30T17:01:30.688Z] : Change(s) is detected in home/views/Subscriptions.vue of the Web-Client.
+[info] [2022-09-30T17:02:27.946Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:02:39.678Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:02:39.777Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:03:46.321Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:04:42.318Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:04:45.566Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:05:02.549Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-30T17:05:11.325Z] : Change(s) is detected in home/main.js of the Web-Client.
+[info] [2022-09-30T17:08:03.377Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:08:04.722Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:08:29.993Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:08:29.994Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:08:37.727Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:08:37.727Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:08:45.300Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:08:45.300Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:09:27.657Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:09:28.489Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:09:28.590Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:09:51.551Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:09:51.552Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:10:03.834Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:10:17.178Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:10:17.178Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:11:16.812Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:11:21.696Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010
+[debug] [2022-09-30T17:11:21.696Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010'
+[error] [2022-09-30T17:11:38.541Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:11:38.542Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:13:13.340Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:13:16.468Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010
+[debug] [2022-09-30T17:13:16.468Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010'
+[error] [2022-09-30T17:13:38.456Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:13:38.457Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:14:34.410Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:15:00.523Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Products.vue
+[debug] [2022-09-30T17:15:00.523Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Products.vue'
+[info] [2022-09-30T17:15:14.366Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:15:18.814Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[debug] [2022-09-30T17:15:24.139Z] : > refreshing access token <
+[debug] [2022-09-30T17:15:24.179Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-09-30T17:15:25.133Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 17:15:25 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=dcb92d0f99dd7421201f8dc746d54606; Path=/","iamcsr=018ae973-54c7-49c3-bdff-52bf217ea7c5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=018ae973-54c7-49c3-bdff-52bf217ea7c5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[error] [2022-09-30T17:15:35.326Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:15:35.327Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:15:38.934Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:15:38.934Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:15:50.306Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:15:50.308Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:15:53.208Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:15:53.209Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[error] [2022-09-30T17:15:58.578Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:15:58.578Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:17:23.157Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:17:35.370Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:18:21.364Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:18:39.688Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:18:39.688Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:19:00.138Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:19:44.671Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:19:45.691Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:21:28.602Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:22:55.048Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:24:06.850Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:24:12.295Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:24:12.396Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:25:54.874Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:27:11.126Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:27:13.085Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:27:31.479Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010
+[debug] [2022-09-30T17:27:31.480Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010'
+[info] [2022-09-30T17:27:45.168Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:27:58.190Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010
+[debug] [2022-09-30T17:27:58.190Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/11176000000076010'
+[info] [2022-09-30T17:28:13.124Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:28:44.690Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:29:01.223Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue
+[debug] [2022-09-30T17:29:01.223Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Logs.vue'
+[info] [2022-09-30T17:29:24.726Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[error] [2022-09-30T17:29:38.329Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Home.vue
+[debug] [2022-09-30T17:29:38.330Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/logs/views/Home.vue'
+[info] [2022-09-30T17:30:03.456Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:30:13.499Z] : Change(s) is detected in home/views/Logs.vue of the Web-Client.
+[info] [2022-09-30T17:30:55.274Z] : Change(s) is detected in home/store.js of the Web-Client.
+[info] [2022-09-30T17:31:26.831Z] : Change(s) is detected in home/store.js of the Web-Client.
