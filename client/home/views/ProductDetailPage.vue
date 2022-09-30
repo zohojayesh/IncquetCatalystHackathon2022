@@ -3,14 +3,20 @@
     <div class="heading"> 
       <h1>
         <v-btn icon @click="goback()"><v-icon>mdi-arrow-left</v-icon></v-btn>
-        {{this_prod.short_description}}</h1> 
+        {{this_prod.short_description}}
+      </h1> 
+      <!-- <p>sub id : {{sub_id}}</p> -->
+      <!-- 
+        <pre>
+        {{subscription_list}}
+      </pre> -->
     </div>
     <v-row>
         <v-col md="3" lg="3" sm="12">
           <product-sidebar :product_list="product_list"></product-sidebar>
         </v-col>
         <v-col md="9" lg="9" sm="12">
-          <product-detail :product="this_prod || {}"></product-detail>
+          <product-detail :product="this_prod || {}" :subscription_id="sub_id"></product-detail>
         </v-col>
     </v-row>
   </v-container>
@@ -26,12 +32,6 @@ module.exports= {
   data () {
       return {
         product_list:[],
-        // items : [
-        //   {id:1,name:'CSV to JSON', short_description:'convert csv to json',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-cloud-braces'},
-        //   {id:2,name:'Phone Call', short_description:'calling',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-phone-outline'},
-        //   {id:3,name:'Google Drive', short_description:' drive ',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-google-drive'},
-        //   {id:4,name:'URL Shortner', short_description:'shortner',long_description:' lorem ipsum lorem ipsum lorem ipsum',icon: 'mdi-link-variant'},
-        // ]        
       }
     },
   methods:{
@@ -52,11 +52,19 @@ module.exports= {
     },
     product_id(){
       return this.$route.params.id;
+    },
+    subscription_list(){
+      return this.$root.subscription_list;
+    },
+    sub_id(){      
+      let sub_rec = this.subscription_list.filter(sub => {return sub.product_id== this.product_id})[0];
+      return sub_rec?sub_rec.ROWID:null;
     }
   },
   created(){
     this.product_list=this.$root.product_list;
     console.log('this.$root.product_list',this.$root.product_list);
+    console.log('this.$root.subscription_list',this.$root.subscription_list);
   },
 }
 </script>

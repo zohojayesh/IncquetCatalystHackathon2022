@@ -1,6 +1,6 @@
 <template>
  <v-navigation-drawer
-    v-model="drawer"
+    v-model="draw"
       absolute
       temporary
       left
@@ -95,6 +95,7 @@ module.exports= {
         //Configure the redirect url after successful logout
         var redirectURL = "/";
         //Use the redirect url and call the method to sign out 
+        window.loginUser = null;
         var auth = catalyst.auth;
         auth.signOut(redirectURL);
       },
@@ -102,14 +103,24 @@ module.exports= {
         catalyst.auth.isUserAuthenticated().then(result => {
             console.log('result',result);
             this.user = result.content;
-            this.$root.user= this.user;
         }).catch(err => {
             console.log('error ',err);
             console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');
         });
 
     }
-    }
+    },
+    computed:{
+      draw:{
+        get(){
+          return this.drawer
+        },
+        set(v){
+          if(!v) this.$emit('close');
+        }
+      }
+  }
+    
 }
 </script>
 

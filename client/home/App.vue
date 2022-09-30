@@ -24,7 +24,6 @@ module.exports = {
     data(){
       return{
         componentKey:0,
-        user:{},
         product_list:[],
       }
     },
@@ -32,23 +31,11 @@ module.exports = {
       forceRerender() {
         this.componentKey += 1;
       },
-      getUser(){
-        catalyst.auth.isUserAuthenticated().then(result => {
-            console.log('result',result);
-            this.user = result.content;
-            this.$root.user= this.user;
-        }).catch(err => {
-            console.log('error ',err);
-            console.log('You are not logged in. Please log in to continue. Redirecting you to the login page..');
-        });
-      }
-
     },
     mounted() {
             this.$root.$on('reload', () => {
                 this.componentKey += 1;
             });
-            this.getUser();
         }
 }
 </script>

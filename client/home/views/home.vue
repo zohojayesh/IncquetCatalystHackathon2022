@@ -100,6 +100,9 @@
                                         Recent Logs
                                         <v-spacer></v-spacer>
                                     </v-card-title>
+                                    <!-- <v-card-text>
+                                        {{user}}
+                                    </v-card-text> -->
                                     <v-data-table
                                     :loading="loading"
                                     :headers="headers"
@@ -161,8 +164,17 @@
       },
      
     },
+    computed:{
+        productList(){
+            return this.$root.product_list;
+        },
+        user(){
+            return this.$root.user;
+        }        
+    },
     created(){
       this.fetchLogs();
+      console.log('productList in home from root',this.productList);
     },
 }
 </script>

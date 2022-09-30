@@ -30,7 +30,7 @@ app.post("/URL_Shortner",(req,res)=>{
 		let resp = {...row,"status":"success"};
 		console.log("\nInserted Row : " + JSON.stringify(resp));
 		res.status(200).json(resp);
-		log.status = 'status';
+		log.status = 'success';
 		log.meta = JSON.stringify(row);
 	})
 	.catch((err) => {

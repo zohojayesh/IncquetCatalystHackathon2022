@@ -3,20 +3,21 @@
     <div class="heading"> <h1> My Logs </h1> </div>
     <v-card>
       <v-card-title>
-        
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
           append-icon="mdi-magnify"
           label="Search Logs"
           single-line
+          clearable
           hide-details
+          @click:clear="clear()"
         ></v-text-field>
       </v-card-title>
       <v-data-table
         :loading="loading"
         :headers="headers"
-        :items="log_list"
+        :items="logs"
         :search="search"
         :sort-by="['Subscription', 'subscription_id']"
         hide-default-footer
@@ -72,11 +73,28 @@ module.exports= {
               this.loading=false;
             });
       },
-     
+     clear(){
+      // this.$router.push({ path: '/logs' });
+      this.$router.push({ path: "/" });
+     }
+    },
+    computed:{
+      logs(){
+        return this.$root.logs;
+      },
+      sub_id(){
+        return this.$route.params.sub_id;
+      }
     },
     created(){
-      this.fetchLogs();
+      console.log('sub-id passed',this.sub_id);
+      this.loading = true;
+      this.$root.getLogs(this.sub_id)
+      .finally(()=>{this.loading=false});
+
+      if(this.sub_id){this.search = this.sub_id};
     },
+    
 }
 </script>
 

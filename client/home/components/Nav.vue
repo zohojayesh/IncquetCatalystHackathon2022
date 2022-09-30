@@ -1,6 +1,6 @@
 <template>
 <div>
-  <side-nav :drawer="drawer"></side-nav>
+  <side-nav :drawer="drawer" @close="drawer=false"></side-nav>
 
   <v-app-bar app
     color="deep-purple accent-4"
@@ -35,7 +35,7 @@ module.exports= {
   },
   components:{
       'side-nav':httpVueLoader('./Sidenav.vue')
-    },
+    }    
 }
 </script>
 
