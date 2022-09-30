@@ -3,7 +3,7 @@
     <v-card elevation="2" class="code-snippets">
         <v-card-title>
             {{product.name}}
-            <v-btn :loading="subscribeLoading" @click="subscribe()" :class="{'green--text':!!subscription_id,'red--text':!subscription_id}" text link absolute right>
+            <v-btn :disabled="subscription_id" :loading="subscribeLoading" @click="subscribe()" :class="{'green--text':!!subscription_id,'red--text':!subscription_id}" text link absolute right>
                 <v-icon v-if="subscription_id">mdi-check-all</v-icon>
                 {{subscription_id?'Subscribed':'Subscribe'}}
             </v-btn>
@@ -118,6 +118,7 @@ module.exports = {
             setTimeout(()=>{this.loading=false;},1000);
         },
         subscribe(){
+            
             this.subscribeLoading = true;
             //
             var details = [{"user_id": 000, "product_id": this.product.id,'product_name':this.product.name}];
