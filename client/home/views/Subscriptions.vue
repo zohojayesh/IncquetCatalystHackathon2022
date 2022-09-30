@@ -9,9 +9,10 @@
     >
     <template v-slot:[`item.actions`]="{ item }">
       <v-btn
-        color="primary"
+        color="deep-purple accent-4"
         dark
         class="my-2"
+        outlined
         @click="viewLogItem(item)"
         >
         <v-icon
