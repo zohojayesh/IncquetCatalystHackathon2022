@@ -100,13 +100,12 @@
 
 <script>
 module.exports = {
-    props:['product'],
+    props:['product','subscription_id'],
     data(){
         return{
             selectedElement :null,
             loading:false,
             subscribeLoading:false,
-            subscription_id:null
         }
     },
     methods:{
@@ -126,8 +125,9 @@ module.exports = {
             var table = datastore.tableId('Subscription'); //Provide the table ID or table name to insert the rows in
             table.addRow(details)
             .then((response) => {
-                this.subscription_id = response.content[0].ROWID;
-                console.log(response.content,'sub id',this.subscription_id);
+                // this.subscription_id = response.content[0].ROWID;
+                // console.log(response.content,'sub id',this.subscription_id);
+                this.$root.getSubs();
             }).catch((err) => {
                 console.log(err);
             }).finally(()=>{

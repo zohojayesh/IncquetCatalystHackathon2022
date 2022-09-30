@@ -29,7 +29,6 @@
     },
     data(){
       return{
-        product_list:[],
         loading:false
       }
     },
@@ -46,7 +45,6 @@
         .then(resp => {
                 console.log('productList : ', resp.content);
                 this.product_list = resp.content;
-                this.$root.product_list = this.product_list;
                 return this.fetchProducts(resp.more_records, resp.next_token);
             })
             .catch((err) => {
@@ -55,10 +53,15 @@
               this.loading=false;
             });
       }
-
+  
+    },
+    computed:{
+      product_list(){
+        return this.$root.product_list;
+      }
     },
     created(){
-      this.fetchProducts();
+      // this.fetchProducts();
     }
   }
 </script>

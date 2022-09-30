@@ -3,29 +3,76 @@ const useCounterStore = Pinia.defineStore('counter', {
       return {
         value: 0,
         product_list:[],
+        subscription_list:[],
+        loaded:false
       }
     },
     actions: {
       increment(state) {
         this.value++
       },
+      runQuery(query,key){
+        let zcql = catalyst.ZCatalystQL;
+        return zcql.executeQuery(query).
+        then(queryResult => {
+              // console.log('queryResult',queryResult);
+              if(queryResult.status==200){
+                let l = [];
+                queryResult.content
+                .forEach(resp=>{
+                  l.push(resp[key]);
+                });
+                return l;
+              }else{
+                return [];
+              }
+        })
+      },
       fetchProducts(){
-        var datastore = catalyst.table;
-        var table = datastore.tableId('Products');
-    
-        console.log('datastore',datastore);
-        table 
-            .getPagedRows({ next_token:null, max_rows: 100 }) //Define the maximum rows to be fetched in a single page and pass it along with nextToken
-            .then(resp => {
-                console.log('rows : ', resp.content); //Fetch the rows from the table
-                this.product_list = resp.content;
-            })
-            .catch((err) => {
-                console.log(err.toString());
-            });        
+
+        let zcql = catalyst.ZCatalystQL;
+        let query = 'SELECT * FROM Products';
+
+        //Execute the query by passing it
+        zcql.executeQuery(query).
+        then(queryResult => {
+              console.log('queryResult',queryResult);
+              if(queryResult.status==200){
+                queryResult.content
+                .forEach(resp=>{
+                  this.product_list.push(resp.Products);
+                })
+              }
+        })
+        .catch((err) => {
+            console.log(err.toString());
+        }).finally(()=>{
+          this.loaded=true;
+        });
+        // this.product_list=[{'a':'b'},{'c':'d'}];
+      },
+      getProdsV2(){
+        this.runQuery('SELECT * FROM Products','Products')
+        .then(data=>{
+          this.product_list = data;
+          this.loaded = true;
+        }).catch(e=>{
+          console.log('error getProdsV2',e);
+        })
+      },
+
+      getSubs(){
+        
+        this.runQuery('SELECT * FROM Subscription where user_id=0','Subscription')
+        .then(data=>{
+
+          this.subscription_list = data;
+          this.loaded = true;
+          
+        }).catch(e=>{
+          console.log('error getSubs',e);
+        })
+
       }
     }
   })
-
-
-  // module.exports={useCounterStore}

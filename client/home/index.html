@@ -14,7 +14,22 @@
 </head>
 <body>
     <div id="vue_app" >
-        <App></App>
+
+        <App v-if="loaded">
+        </App>
+
+        <center v-else>
+            <div class="horizontal-bar-wrap">
+                <div class="bar1 bar"></div>
+            </div>
+            <!-- <v-progress-linear
+            indeterminate
+            color="#2b469d"
+            ></v-progress-linear>             -->
+            
+            <img src="https://res.cloudinary.com/incquet-solution/image/upload/v1615650458/Incquet%20website/Incquet_watermark.png" alt="">
+        </center>
+
     </div>
 </body>
 <style>
@@ -22,24 +37,60 @@
     #vue_app,.zc-pb-formreport-placeholder{
         height:100vh !important;
     }
+
+@keyframes barWidth {
+    0%   {width: 0%;}
+    25%  {width: 50%;}
+    50%  {width: 100%;}
+    75%  {width: 50%;}
+    100% {width: 0%;}
+}
+@keyframes barWidth2 {
+    0%   {width: 0%;}
+    50%  {width: 50%;}
+    100% {width: 100%;}
+}
+.horizontal-bar-wrap {
+  height: 4px;
+  width: 100%;
+}
+.horizontal-bar-wrap .bar {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  margin: 0 auto;
+  animation: barWidth;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.horizontal-bar-wrap .bar.bar1 {
+  animation-delay: 0s;
+  background: #2b469d;
+  top: 0;
+  z-index: 1;
+}    
+
+
 </style>
 <!-- zoho sdk -->
 <script src="https://static.zohocdn.com/catalyst/sdk/js/3.1.0/catalystWebSDK.js"></script>
 <script src="/__catalyst/sdk/init.js"></script>
 <!-- vuejs  -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
-
-<!-- pinia -->
-<!-- <script src="https://unpkg.com/@vue/composition-api"></script>
-<script src="https://unpkg.com/vue-demi"></script>
-<script src="https://unpkg.com/pinia"></script> -->
-
-<!-- vue loader : to lead vue component -->
-<script src="https://unpkg.com/http-vue-loader"></script>
 <!-- vuetify -->
 <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-<!-- <script src="store.js" ></script> -->
+<!-- vuerouter -->
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+<!-- vue loader : to lead vue component -->
+<script src="https://unpkg.com/http-vue-loader"></script>
+
+<!-- pinia -->
+<script src="https://unpkg.com/@vue/composition-api"></script>
+<script src="https://unpkg.com/vue-demi"></script>
+<script src="https://unpkg.com/pinia"></script>
+
+<script src="store.js"></script>
 <script src="main.js" type="module"></script>
 <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "f86140f0951f46060b080317e6adc765240b31a06d287719f2be142fe2b4b8cd", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
 </html>
