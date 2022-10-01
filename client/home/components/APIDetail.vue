@@ -69,6 +69,36 @@
                 </div>
             </div>
 
+        <v-divider></v-divider>
+        <v-card-subtitle> Successful Response </v-card-subtitle>
+        
+        <div class="code-snippetWrapper">
+            <div class="code-snippetArea">
+
+                <!-- <v-btn  :loading="selectedElement==`body_${api.ROWID}` && loading" @click="copyCode('body')" 
+                        :class="{'green--text lighten-2':selectedElement==`body_${api.ROWID}` && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement==`body_${api.ROWID}`?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
+                </v-btn> -->
+
+                <pre  :ref="`success_response_${api.ROWID}_code_ref`">{{api.success_response_json | formatjson}} </pre>
+
+            </div>
+        </div>
+
+        <v-divider></v-divider>
+        <v-card-subtitle> Failed Response </v-card-subtitle>
+        
+        <div class="code-snippetWrapper">
+            <div class="code-snippetArea">
+
+                <!-- <v-btn  :loading="selectedElement==`body_${api.ROWID}` && loading" @click="copyCode('body')" 
+                        :class="{'green--text lighten-2':selectedElement==`body_${api.ROWID}` && !loading,'blue-grey--text':selectedElement!='body'}" text link absolute right><v-icon> {{selectedElement==`body_${api.ROWID}`?'mdi-checkbox-multiple-marked-outline':'mdi-content-copy'}} </v-icon>
+                </v-btn> -->
+
+                <pre  :ref="`success_response_${api.ROWID}_code_ref`">{{api.failure_response_json | formatjson}} </pre>
+
+            </div>
+        </div>
+
 </div> 
 </template>
 

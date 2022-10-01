@@ -80,3 +80,6 @@ Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 00:02:07 GMT","conten
 [info] [2022-10-01T00:28:22.635Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
 [info] [2022-10-01T00:29:09.784Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
 [info] [2022-10-01T00:30:17.076Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-10-01T00:38:27.645Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-10-01T00:41:41.219Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
+[info] [2022-10-01T00:41:49.859Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.

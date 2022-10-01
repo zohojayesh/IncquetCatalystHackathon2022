@@ -24,7 +24,7 @@
         
         <v-tabs-items v-model="tab">
             <v-tab-item v-for="(api,i) in prod_apis" :key="i" :value="`tab-${i}`">
-                <Apidetail :api="product" :subscription_id="subscription_id" />
+                <Apidetail :api="api" :subscription_id="subscription_id" />
             </v-tab-item>
         </v-tabs-items>
     </v-card>
