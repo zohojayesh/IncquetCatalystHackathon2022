@@ -18,7 +18,7 @@
         <App v-if="loaded">
         </App>
 
-        <center v-else>
+        <center v-else style="height:100%" class="loading-app">
             <div class="horizontal-bar-wrap">
                 <div class="bar1 bar"></div>
             </div>
@@ -27,7 +27,8 @@
             color="#2b469d"
             ></v-progress-linear>             -->
             
-            <img src="https://res.cloudinary.com/incquet-solution/image/upload/v1615650458/Incquet%20website/Incquet_watermark.png" alt="">
+            <img width="80%" height="100%" src="https://res.cloudinary.com/incquet-solution/image/upload/v1615650458/Incquet%20website/Incquet_watermark.png" alt="">
+            <p class="grey--text">loading...</p>
         </center>
 
     </div>
@@ -37,7 +38,16 @@
     #vue_app,.zc-pb-formreport-placeholder{
         height:100vh !important;
     }
-
+.loading-app{
+    height: 100%;
+}
+.loading-app p{
+    position: absolute;
+    bottom: 30%;
+    text-align: center;
+    width: 100%;
+    color: rgb(174, 174, 174);
+}
 @keyframes barWidth {
     0%   {width: 0%;}
     25%  {width: 50%;}

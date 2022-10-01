@@ -1,85 +1,72 @@
-[debug] [2022-09-30T23:30:49.871Z] : 
-[debug] [2022-09-30T23:30:49.872Z] : ----------------------------------------------------------------------
-[debug] [2022-09-30T23:30:49.872Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
-[debug] [2022-09-30T23:30:49.873Z] : CLI Version:  1.12.1
-[debug] [2022-09-30T23:30:49.873Z] : Platform:     darwin
-[debug] [2022-09-30T23:30:49.873Z] : Node Version: v14.18.0
-[debug] [2022-09-30T23:30:49.878Z] : Time:         Sat Oct 01 2022 05:00:49 GMT+0530 (India Standard Time)
-[debug] [2022-09-30T23:30:49.879Z] : ----------------------------------------------------------------------
-[debug] [2022-09-30T23:30:49.879Z] : 
-[debug] [2022-09-30T23:30:50.330Z] : > authorizing via signed-in user option
-[debug] [2022-09-30T23:30:50.331Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
-[debug] [2022-09-30T23:30:50.341Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
-
-[debug] [2022-09-30T23:30:51.435Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 23:30:51 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=a1b443f9-25ea-47d2-97cc-bb5b80915159;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a1b443f9-25ea-47d2-97cc-bb5b80915159;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
-
-[debug] [2022-09-30T23:30:51.442Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
-
-[debug] [2022-09-30T23:30:52.322Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 23:30:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=e6610a16-ff35-4536-bc4c-6bd1285b5738;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e6610a16-ff35-4536-bc4c-6bd1285b5738;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
-
-[debug] [2022-09-30T23:30:52.465Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
-Query params: {"type":"basicio,event,cron,applogic,integration"}
-
-[debug] [2022-09-30T23:30:53.353Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 30 Sep 2022 23:30:53 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=6a22531a-8837-4dfe-9806-40f69c1c8529;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6a22531a-8837-4dfe-9806-40f69c1c8529;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
-
-[debug] [2022-09-30T23:30:53.360Z] : unknown eol undefined hence skipping check
-[debug] [2022-09-30T23:30:53.360Z] : unknown eol undefined hence skipping check
-[debug] [2022-09-30T23:30:53.360Z] : unknown eol undefined hence skipping check
-[debug] [2022-09-30T23:30:53.361Z] : unknown eol undefined hence skipping check
-[debug] [2022-09-30T23:30:53.361Z] : unknown eol undefined hence skipping check
-[debug] [2022-09-30T23:30:53.369Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
-[debug] [2022-09-30T23:30:53.372Z] : http port : '3010' is not available. Hence port '3012' will be used instead.
-[info] [2022-09-30T23:30:53.600Z] : ℹ functions(addLog): URL => http://localhost:3000/server/addLog/execute
-[info] [2022-09-30T23:30:53.600Z] : ℹ functions(subscribe): URL => http://localhost:3000/server/subscribe/execute
-[info] [2022-09-30T23:30:53.601Z] : 
-[info] [2022-09-30T23:30:53.635Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
-[info] [2022-09-30T23:30:53.635Z] : 
-[info] [2022-09-30T23:30:53.644Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
-[info] [2022-09-30T23:30:53.644Z] : 
-[info] [2022-09-30T23:30:53.658Z] : ℹ server[googledrive]: URL : http://localhost:3000/server/googledrive/
-[info] [2022-09-30T23:30:53.658Z] : 
-[info] [2022-09-30T23:30:53.793Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/
-[info] [2022-09-30T23:32:42.345Z] : Change(s) is detected in home/store.js of the Web-Client.
-[info] [2022-09-30T23:32:51.217Z] : Change(s) is detected in home/main.js of the Web-Client.
-[info] [2022-09-30T23:35:00.420Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[error] [2022-09-30T23:36:15.147Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Home.vue
-[debug] [2022-09-30T23:36:15.148Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Home.vue'
-[error] [2022-09-30T23:36:17.156Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Home.vue
-[debug] [2022-09-30T23:36:17.156Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Home.vue'
-[info] [2022-09-30T23:39:06.450Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[error] [2022-09-30T23:39:10.123Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3
-[debug] [2022-09-30T23:39:10.125Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/3'
-[info] [2022-09-30T23:41:10.285Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-09-30T23:41:16.972Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-09-30T23:41:17.069Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-09-30T23:58:49.237Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:00:23.719Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:01:19.487Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:01:51.303Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:02:04.102Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[debug] [2022-10-01T00:02:07.005Z] : > refreshing access token <
-[debug] [2022-10-01T00:02:07.012Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+[debug] [2022-10-01T08:50:59.559Z] : 
+[debug] [2022-10-01T08:50:59.560Z] : ----------------------------------------------------------------------
+[debug] [2022-10-01T08:50:59.560Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-10-01T08:50:59.560Z] : CLI Version:  1.12.1
+[debug] [2022-10-01T08:50:59.560Z] : Platform:     darwin
+[debug] [2022-10-01T08:50:59.560Z] : Node Version: v14.18.0
+[debug] [2022-10-01T08:50:59.565Z] : Time:         Sat Oct 01 2022 14:20:59 GMT+0530 (India Standard Time)
+[debug] [2022-10-01T08:50:59.565Z] : ----------------------------------------------------------------------
+[debug] [2022-10-01T08:50:59.565Z] : 
+[debug] [2022-10-01T08:50:59.997Z] : > authorizing via signed-in user option
+[debug] [2022-10-01T08:50:59.998Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-10-01T08:51:00.008Z] : > refreshing access token <
+[debug] [2022-10-01T08:51:00.008Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
 <request body omitted>
 
-[debug] [2022-10-01T00:02:07.887Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 00:02:07 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=edfdd7cd-eff5-4ef7-a896-5007d1824fe0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=edfdd7cd-eff5-4ef7-a896-5007d1824fe0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+[debug] [2022-10-01T08:51:00.883Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 08:51:00 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=57c7a14afabcac9a0b9dfc64b3542b70; Path=/","iamcsr=8821c8fb-a2f1-422b-b6ee-465ebd195c15;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8821c8fb-a2f1-422b-b6ee-465ebd195c15;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
 
-[info] [2022-10-01T00:04:20.973Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:06:42.405Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:07:13.090Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:17:47.660Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:21:46.363Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:25:21.626Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:25:24.619Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:26:09.054Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:26:10.884Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:26:39.356Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:28:22.635Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:29:09.784Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:30:17.076Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:38:27.645Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
-[info] [2022-10-01T00:41:41.219Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
-[info] [2022-10-01T00:41:49.859Z] : Change(s) is detected in home/components/APIDetail.vue of the Web-Client.
+[debug] [2022-10-01T08:51:00.920Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+
+[debug] [2022-10-01T08:51:01.869Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 08:51:01 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=cc5a0d92-6f8d-49db-af95-1b9cc45fc183;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=cc5a0d92-6f8d-49db-af95-1b9cc45fc183;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-10-01T08:51:01.872Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
+
+[debug] [2022-10-01T08:51:02.713Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 08:51:02 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=6d0547f1-ba6f-4cfa-b56a-71e8b4fcd475;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6d0547f1-ba6f-4cfa-b56a-71e8b4fcd475;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-10-01T08:51:02.842Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-10-01T08:51:03.695Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 01 Oct 2022 08:51:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=4af8e069-3fb6-49b3-b445-498618e15f22;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4af8e069-3fb6-49b3-b445-498618e15f22;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-10-01T08:51:03.702Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-01T08:51:03.703Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-01T08:51:03.703Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-01T08:51:03.704Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-01T08:51:03.704Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-01T08:51:03.715Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[debug] [2022-10-01T08:51:03.719Z] : http port : '3010' is not available. Hence port '3012' will be used instead.
+[info] [2022-10-01T08:51:03.893Z] : ℹ functions(addLog): URL => http://localhost:3000/server/addLog/execute
+[info] [2022-10-01T08:51:03.893Z] : ℹ functions(subscribe): URL => http://localhost:3000/server/subscribe/execute
+[info] [2022-10-01T08:51:03.894Z] : 
+[info] [2022-10-01T08:51:03.907Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
+[info] [2022-10-01T08:51:03.907Z] : 
+[info] [2022-10-01T08:51:03.917Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-10-01T08:51:03.918Z] : 
+[info] [2022-10-01T08:51:03.925Z] : ℹ server[googledrive]: URL : http://localhost:3000/server/googledrive/
+[info] [2022-10-01T08:51:03.925Z] : 
+[info] [2022-10-01T08:51:04.062Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/
+[info] [2022-10-01T08:52:19.140Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-10-01T08:53:38.194Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[info] [2022-10-01T08:55:43.711Z] : Change(s) is detected in home/components/ProductDetail.vue of the Web-Client.
+[error] [2022-10-01T08:57:31.361Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue
+[debug] [2022-10-01T08:57:31.362Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/views/Subscriptions.vue'
+[error] [2022-10-01T09:04:09.523Z] : ✖ Unable to serve the requested file: /Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/7
+[debug] [2022-10-01T09:04:09.523Z] : Error: ENOENT: no such file or directory, stat '/Users/jayesh/Documents/GitHub/catalyst/hackathon2022/client/home/products/7'
+[info] [2022-10-01T09:04:52.775Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:05:05.934Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:06:11.086Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:06:34.708Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:06:46.014Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:08:06.155Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:09:26.366Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:09:40.658Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:09:40.758Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:09:51.874Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:10:05.906Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:10:34.524Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:10:47.691Z] : Change(s) is detected in home/index.html of the Web-Client.
+[info] [2022-10-01T09:11:16.578Z] : Change(s) is detected in home/index.html of the Web-Client.

@@ -11,22 +11,24 @@
         <v-card-text class="pb-2">
             {{product.long_description}}
         </v-card-text>
+        <div v-if="prod_apis.length>1">
+            <v-tabs 
+                v-model="tab"
+                class="proj_detail_tab deep-purple acsent-4"
+                center-active >
+                <v-tab v-for="(api,i) in prod_apis" :key="`${i}-header`"
+                :href="`#tab-${i}`"
+                >{{api.api_name}}</v-tab>
+            </v-tabs>
+            
+            <v-tabs-items v-model="tab">
+                <v-tab-item v-for="(api,i) in prod_apis" :key="i" :value="`tab-${i}`">
+                    <Apidetail :api="api" :subscription_id="subscription_id" />
+                </v-tab-item>
+            </v-tabs-items>
+        </div>
+        <Apidetail v-else :api="prod_apis[0]" :subscription_id="subscription_id" />
 
-        <v-tabs
-            v-if="prod_apis.length>1"
-            v-model="tab"
-            class="proj_detail_tab deep-purple acsent-4"
-            center-active >
-            <v-tab v-for="(api,i) in prod_apis" :key="`${i}-header`"
-            :href="`#tab-${i}`"
-            >{{api.api_name}}</v-tab>
-        </v-tabs>
-        
-        <v-tabs-items v-model="tab">
-            <v-tab-item v-for="(api,i) in prod_apis" :key="i" :value="`tab-${i}`">
-                <Apidetail :api="api" :subscription_id="subscription_id" />
-            </v-tab-item>
-        </v-tabs-items>
     </v-card>
     </div>
 </template>
