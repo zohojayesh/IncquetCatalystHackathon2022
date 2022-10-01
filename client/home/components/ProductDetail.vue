@@ -13,6 +13,7 @@
         </v-card-text>
 
         <v-tabs
+            v-if="prod_apis.length >1"
             class="proj_detail_tab"
             center-active >
             <v-tab>One</v-tab>
@@ -20,7 +21,7 @@
             <v-tab>Three</v-tab>
         </v-tabs>
 
-            <Apidetail :product="product" :subscription_id="subscription_id" />
+            <Apidetail :api="product" :subscription_id="subscription_id" />
         </v-card>
     </div>
 </template>
@@ -54,7 +55,14 @@ module.exports = {
                 this.subscribeLoading = false;
             });
         }
-
+    },
+    computed:{
+        all_apis(){
+            return this.$root.api_list;
+        },
+        prod_apis(){
+            return this.all_apis.filter(api=>{api.product_id==this.product.id});
+        }
     }
 }
 </script>

@@ -6,7 +6,8 @@ const useCounterStore = Pinia.defineStore('counter', {
         subscription_list:[],
         loaded:false,
         user:null,
-        logs:[]
+        logs:[],
+        api_list:[]
       }
     },
     actions: {
@@ -104,6 +105,15 @@ const useCounterStore = Pinia.defineStore('counter', {
           return e;
         })
 
+      },
+      getAPIs(){
+
+        this.runQuery(`SELECT * FROM APIs`,'APIs')
+        .then(data=>{
+          this.api_list = data;
+        }).catch(e=>{
+          console.log('error getAPI',e);
+        })
       }
     }
   })

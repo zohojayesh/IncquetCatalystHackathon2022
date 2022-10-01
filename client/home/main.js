@@ -52,10 +52,10 @@ var app = new Vue({
     pinia: Pinia.createPinia(),
     components:{'App':httpVueLoader('./App.vue')},
     computed: {
-        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded','user','logs'])
+        ...Pinia.mapState(useCounterStore, ['value','product_list','subscription_list','loaded','user','logs','api_list'])
     },
     methods: {
-        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs','getUser','getLogs'])
+        ...Pinia.mapActions(useCounterStore, ['increment','fetchProducts','getProdsV2','getSubs','getUser','getLogs','getAPIs'])
     },
     created(){
         console.log("vue app initialised");
@@ -64,5 +64,6 @@ var app = new Vue({
             this.getSubs();
         });
         this.getProdsV2();
+        this.getAPIs();
     }
 });
