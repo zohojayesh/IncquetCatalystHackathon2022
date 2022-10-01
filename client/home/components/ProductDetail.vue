@@ -13,16 +13,21 @@
         </v-card-text>
 
         <v-tabs
-            v-if="prod_apis.length >1"
-            class="proj_detail_tab"
+            v-if="prod_apis.length>1"
+            v-model="tab"
+            class="proj_detail_tab deep-purple acsent-4"
             center-active >
-            <v-tab>One</v-tab>
-            <v-tab>Two</v-tab>
-            <v-tab>Three</v-tab>
+            <v-tab v-for="(api,i) in prod_apis" :key="`${i}-header`"
+            :href="`#tab-${i}`"
+            >{{api.api_name}}</v-tab>
         </v-tabs>
-
-            <Apidetail :api="product" :subscription_id="subscription_id" />
-        </v-card>
+        
+        <v-tabs-items v-model="tab">
+            <v-tab-item v-for="(api,i) in prod_apis" :key="i" :value="`tab-${i}`">
+                <Apidetail :api="product" :subscription_id="subscription_id" />
+            </v-tab-item>
+        </v-tabs-items>
+    </v-card>
     </div>
 </template>
 
@@ -33,6 +38,7 @@ module.exports = {
     data(){
         return{
             subscribeLoading:false,
+            tab:'tab-0'
         }
     },
     methods:{
@@ -61,7 +67,7 @@ module.exports = {
             return this.$root.api_list;
         },
         prod_apis(){
-            return this.all_apis.filter(api=>{api.product_id==this.product.id});
+            return this.all_apis.filter(api=>api.product_id==this.product.id);
         }
     }
 }
