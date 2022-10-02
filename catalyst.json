@@ -5,7 +5,8 @@
       "microservice",
       "addLog",
       "subscribe",
-      "googledrive"
+      "googledrive",
+      "phonecall"
     ],
     "ignore": [],
     "source": "functions"
