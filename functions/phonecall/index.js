@@ -2,6 +2,7 @@
 
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
+const handler = require('./handler');
 
 const app = express();
 app.use(express.json());
@@ -10,11 +11,18 @@ const authToken = process.env.authToken;
 const client = require('twilio')(accountSid, authToken);
 const voice = 'Polly.Aditi'; //Aditi,Ivy
 const language = 'en-IN'; //en-US
-
-app.post("/make-call", (req, res) => {
+const PHONECALL_ID = 3;
+app.post("/make-call", async (req, res) => {
 
     const catalystApp = catalyst.initialize(req);
-	const requestQuery = req.query;
+	let sub_id = req.query.subscription_id;
+	let check = await handler.checkSub(catalystApp,sub_id,PHONECALL_ID);
+	let log={};
+
+	if(check.status=='failure'){
+		res.status(200).json(check);
+		return;
+	}
 
 	//Get Segment instance with segment ID (If no ID is given, Default segment is used) , 	    <Dial>+919960968129</Dial>
 	const phone1 = req.body.p1.phone || '+918668462855';
@@ -41,8 +49,15 @@ app.post("/make-call", (req, res) => {
 		  .then((call) =>{ 
 			console.log(call.sid);
 			res.status(200).json(call);
+			log.status = 'success';
+			log.meta = call;
 		}).catch((error)=>{
 			res.status(200).json(error);
+			log.status = 'failure';
+			log.meta = error;
+		}).finally(()=>{
+			let datastore = catalystApp.datastore();
+			createLog(datastore,PHONECALL_ID,sub_id,check.user_id,log);
 		});
 });
 app.post("/end-call", (req, res) => {
@@ -64,5 +79,25 @@ app.all("/", (req,res) => {
 	res.status(200).send("I am Live and Ready.");
 
 });
+
+function createLog(datastore,product_id,subscription_id,user_id,log){
+
+	let rowData = 
+    {
+        product_id: product_id,
+        subscription_id: subscription_id,
+        status: log.status,
+		user_id:user_id,
+		meta:log.meta
+    };
+
+    let table = datastore.table('Logs');
+    let insertPromise = table.insertRow(rowData);
+    insertPromise.then((row) => {
+		console.log('log inserted',row);
+	}).catch(e=>{
+		console.log('log insersion error',e);
+	});
+}
 
 module.exports = app;
