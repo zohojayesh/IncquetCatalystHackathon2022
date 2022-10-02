@@ -13,6 +13,7 @@
     background-color: #f7f6f9 !important;
     /* border: 1px solid #e8e2f2; */
     padding: 0px 0px 1em;
+    overflow: scroll;    
 }
 .prod-catogary-title{
     color: #727272;
@@ -28,6 +29,7 @@
     border-radius: 5px;
     position: relative;
     padding: 0.8em;
+    overflow: scroll;
 }
 .code-snippetWrapper pre{
     padding: 0.5em 0.7em;

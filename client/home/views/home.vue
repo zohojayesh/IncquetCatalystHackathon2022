@@ -106,7 +106,7 @@
                                     <v-data-table
                                     :loading="loading"
                                     :headers="headers"
-                                    :items="log_list"
+                                    :items="logs"
                                     hide-default-footer
                                     ></v-data-table>
                                 </v-card>
@@ -170,11 +170,19 @@
         },
         user(){
             return this.$root.user;
-        }        
+        },
+        logs(){
+            let l = this.$root.logs || [];
+            // l.lenght>0?l.slice(0,5):[];
+            return this.$root.logs.slice(0,5);
+        },
     },
     created(){
-      this.fetchLogs();
-      console.log('productList in home from root',this.productList);
+    //   this.fetchLogs();
+    this.loading = true;
+    this.$root.getLogs()
+    .finally(()=>{this.loading=false});
+    console.log('productList in home from root',this.productList);
     },
 }
 </script>
