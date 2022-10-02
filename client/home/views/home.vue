@@ -30,7 +30,7 @@
                                     <v-card-subtitle class="py-2"> Successfull API Calls</v-card-subtitle>
 
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/logs'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
@@ -57,7 +57,7 @@
                                     <v-card-subtitle class="py-2"> Failed API Calls </v-card-subtitle>
                                     
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/logs'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
@@ -82,7 +82,7 @@
                                 </v-row>
                                     <v-card-subtitle class="py-2"> Products Subscribed</v-card-subtitle>
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/subscriptions'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
