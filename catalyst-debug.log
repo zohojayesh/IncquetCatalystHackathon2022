@@ -1,52 +1,48 @@
-[debug] [2022-10-02T01:54:49.933Z] : 
-[debug] [2022-10-02T01:54:49.935Z] : ----------------------------------------------------------------------
-[debug] [2022-10-02T01:54:49.935Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
-[debug] [2022-10-02T01:54:49.936Z] : CLI Version:  1.13.3
-[debug] [2022-10-02T01:54:49.936Z] : Platform:     darwin
-[debug] [2022-10-02T01:54:49.936Z] : Node Version: v16.17.0
-[debug] [2022-10-02T01:54:49.943Z] : Time:         Sun Oct 02 2022 07:24:49 GMT+0530 (India Standard Time)
-[debug] [2022-10-02T01:54:49.944Z] : ----------------------------------------------------------------------
-[debug] [2022-10-02T01:54:49.944Z] : 
-[debug] [2022-10-02T01:54:50.931Z] : > authorizing via signed-in user option
-[debug] [2022-10-02T01:54:50.932Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
-[debug] [2022-10-02T01:54:50.944Z] : > refreshing access token <
-[debug] [2022-10-02T01:54:50.947Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
-<request body omitted>
+[debug] [2022-10-02T23:57:13.533Z] : 
+[debug] [2022-10-02T23:57:13.534Z] : ----------------------------------------------------------------------
+[debug] [2022-10-02T23:57:13.535Z] : Command:      /usr/local/bin/node /usr/local/bin/catalyst serve
+[debug] [2022-10-02T23:57:13.535Z] : CLI Version:  1.12.1
+[debug] [2022-10-02T23:57:13.535Z] : Platform:     darwin
+[debug] [2022-10-02T23:57:13.535Z] : Node Version: v14.18.0
+[debug] [2022-10-02T23:57:13.541Z] : Time:         Mon Oct 03 2022 05:27:13 GMT+0530 (India Standard Time)
+[debug] [2022-10-02T23:57:13.541Z] : ----------------------------------------------------------------------
+[debug] [2022-10-02T23:57:13.541Z] : 
+[debug] [2022-10-02T23:57:13.990Z] : > authorizing via signed-in user option
+[debug] [2022-10-02T23:57:13.991Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-10-02T23:57:14.007Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
 
-[debug] [2022-10-02T01:54:51.904Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 01:54:51 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=dcb92d0f99dd7421201f8dc746d54606; Path=/","iamcsr=0ac1e16e-0647-4f2a-b8f0-0fb756a347a6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=0ac1e16e-0647-4f2a-b8f0-0fb756a347a6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+[debug] [2022-10-02T23:57:14.886Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 23:57:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=023f88b2-b51f-4be8-a44f-e7524a74692d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=023f88b2-b51f-4be8-a44f-e7524a74692d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-10-02T01:54:51.947Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001 
+[debug] [2022-10-02T23:57:14.896Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
 
-[debug] [2022-10-02T01:54:53.893Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 01:54:53 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=90d4f0de-1845-41b2-8fea-f239d5f1b185;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=90d4f0de-1845-41b2-8fea-f239d5f1b185;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2022-10-02T23:57:15.778Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 23:57:15 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=c05be85b-b8b4-4d23-80ec-b0e11e58b1dd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c05be85b-b8b4-4d23-80ec-b0e11e58b1dd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-10-02T01:54:53.894Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/environment 
-
-[debug] [2022-10-02T01:54:54.778Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 01:54:54 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=38c6061b-fa94-4a2e-897c-6e50d06300db;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=38c6061b-fa94-4a2e-897c-6e50d06300db;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
-
-[debug] [2022-10-02T01:54:54.985Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
+[debug] [2022-10-02T23:57:15.916Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/11176000000062001/function 
 Query params: {"type":"basicio,event,cron,applogic,integration"}
 
-[debug] [2022-10-02T01:54:55.913Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 01:54:55 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=9162f4dc-2d23-4038-9cfc-aa72a27680c1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9162f4dc-2d23-4038-9cfc-aa72a27680c1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2022-10-02T23:57:16.728Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sun, 02 Oct 2022 23:57:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=871f96ec-bd92-49a5-a38e-021576411a88;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=871f96ec-bd92-49a5-a38e-021576411a88;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-10-02T01:54:55.917Z] : unknown eol undefined hence skipping check
-[debug] [2022-10-02T01:54:55.918Z] : unknown eol undefined hence skipping check
-[debug] [2022-10-02T01:54:55.918Z] : unknown eol undefined hence skipping check
-[debug] [2022-10-02T01:54:55.919Z] : unknown eol undefined hence skipping check
-[debug] [2022-10-02T01:54:55.919Z] : unknown eol undefined hence skipping check
-[debug] [2022-10-02T01:54:55.929Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
-[debug] [2022-10-02T01:54:55.931Z] : http port : '3010' is not available. Hence port '3012' will be used instead.
-[info] [2022-10-02T01:54:55.979Z] : ℹ functions(addLog): URL => http://localhost:3000/server/addLog/execute
-[info] [2022-10-02T01:54:55.980Z] : ℹ functions(subscribe): URL => http://localhost:3000/server/subscribe/execute
-[info] [2022-10-02T01:54:55.981Z] : 
-[info] [2022-10-02T01:54:55.995Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
-[info] [2022-10-02T01:54:55.996Z] : 
-[info] [2022-10-02T01:54:56.004Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
-[info] [2022-10-02T01:54:56.005Z] : 
-[info] [2022-10-02T01:54:56.018Z] : ℹ server[googledrive]: URL : http://localhost:3000/server/googledrive/
-[info] [2022-10-02T01:54:56.019Z] : 
-[info] [2022-10-02T01:54:56.178Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/
-[info] [2022-10-02T01:54:57.611Z] : Change(s) is detected in .catalyst/reload-script.js of the Web-Client.
+[debug] [2022-10-02T23:57:16.732Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.733Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.733Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.733Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.733Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.733Z] : unknown eol undefined hence skipping check
+[debug] [2022-10-02T23:57:16.744Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[debug] [2022-10-02T23:57:16.747Z] : http port : '3010' is not available. Hence port '3012' will be used instead.
+[debug] [2022-10-02T23:57:16.749Z] : http port : '3010' is not available. Hence port '3013' will be used instead.
+[info] [2022-10-02T23:57:17.065Z] : ℹ functions(addLog): URL => http://localhost:3000/server/addLog/execute
+[info] [2022-10-02T23:57:17.066Z] : ℹ functions(subscribe): URL => http://localhost:3000/server/subscribe/execute
+[info] [2022-10-02T23:57:17.066Z] : 
+[info] [2022-10-02T23:57:17.098Z] : ℹ server[hackathon_2022_function]: URL : http://localhost:3000/server/hackathon_2022_function/
+[info] [2022-10-02T23:57:17.099Z] : 
+[info] [2022-10-02T23:57:17.114Z] : ℹ server[microservice]: URL : http://localhost:3000/server/microservice/
+[info] [2022-10-02T23:57:17.114Z] : 
+[info] [2022-10-02T23:57:17.130Z] : ℹ server[googledrive]: URL : http://localhost:3000/server/googledrive/
+[info] [2022-10-02T23:57:17.130Z] : 
+[info] [2022-10-02T23:57:17.148Z] : ℹ server[phonecall]: URL : http://localhost:3000/server/phonecall/
+[info] [2022-10-02T23:57:17.148Z] : 
+[info] [2022-10-02T23:57:17.288Z] : ℹ client[clientApp]: URL : http://localhost:3000/app/

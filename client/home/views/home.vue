@@ -17,20 +17,20 @@
                                     <v-row class="ma-0">
                                     <v-col md="6">
                                         <v-card-title class="text-h5 pa-1">
-                                            <v-icon large>mdi-wunderlist</v-icon>
+                                            <v-icon large>mdi-check-all</v-icon>
                                         </v-card-title>
                                     </v-col>
                                     <v-col md="6">
-                                        <v-card-title class="text-h5 pa-1">
-                                            2
+                                        <v-card-title class="text-h5 pa-1 float-right">
+                                            {{logCounts.success}}
                                         </v-card-title>
                                     </v-col>
                                 </v-row>
 
-                                    <v-card-subtitle class="py-2"> My Subscriptions</v-card-subtitle>
+                                    <v-card-subtitle class="py-2"> Successfull API Calls</v-card-subtitle>
 
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/logs'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
@@ -45,19 +45,19 @@
                                     <v-row class="ma-0">
                                         <v-col md="6">
                                             <v-card-title class="text-h5 pa-1">
-                                                <v-icon large> mdi-cash </v-icon>
+                                                <v-icon large> mdi-alert-circle-outline </v-icon>
                                             </v-card-title>
                                         </v-col>
                                         <v-col md="6">
-                                            <v-card-title class="text-h5 pa-1">
-                                                12
+                                            <v-card-title class="text-h5 pa-1 float-right">
+                                                {{logCounts.failure}}
                                             </v-card-title>
                                         </v-col>
                                     </v-row>
-                                    <v-card-subtitle class="py-2"> Credits Consume </v-card-subtitle>
+                                    <v-card-subtitle class="py-2"> Failed API Calls </v-card-subtitle>
                                     
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/logs'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
@@ -71,18 +71,18 @@
                                 <v-row class="ma-0">
                                     <v-col md="6">
                                         <v-card-title class="text-h5 pa-1">
-                                            <v-icon large>mdi-cash-multiple</v-icon>
+                                            <v-icon large>mdi-youtube-subscription</v-icon>
                                         </v-card-title>
                                     </v-col>
                                     <v-col md="6">
-                                        <v-card-title class="text-h5 pa-1">
-                                            6
+                                        <v-card-title class="text-h5 pa-1 float-right">
+                                            {{subscribed}}
                                         </v-card-title>
                                     </v-col>
                                 </v-row>
-                                    <v-card-subtitle class="py-2"> Credits Available</v-card-subtitle>
+                                    <v-card-subtitle class="py-2"> Products Subscribed</v-card-subtitle>
                                     <v-card-actions>
-                                    <v-btn text small>
+                                    <v-btn text small link to='/subscriptions'>
                                         Explore
                                     </v-btn>
                                     </v-card-actions>
@@ -106,7 +106,7 @@
                                     <v-data-table
                                     :loading="loading"
                                     :headers="headers"
-                                    :items="logs"
+                                    :items="logs.slice(0,5)"
                                     hide-default-footer
                                     ></v-data-table>
                                 </v-card>
@@ -115,7 +115,7 @@
                     </v-col> <!-- col-7 -->
                 </v-row>
             </div>
-        </div>  <!-- business-automation -->
+        </div>  
     </div>
 </template>
 <script>module.exports= {
@@ -124,17 +124,10 @@
         loading: false,
         search: '',
         headers: [
-          {
-            text: 'User',
-            align: 'start',
-            sortable: false,
-            value: 'user_id',
-          },
-          { text: 'Subscription', value: 'subscription_id' },
-          { text: 'Product', value: 'product_id' },
-          { text: 'Meta', value: 'meta' },
-          { text: 'Status', value: 'status' },
           { text: 'Added Date', value: 'CREATEDTIME' },
+          { text: 'Product ID', value: 'product_id' },
+          { text: 'Status', value: 'status' },
+          { text: 'Subscription', value: 'subscription_id' }
         ],
         log_list: [],
       }
@@ -172,17 +165,26 @@
             return this.$root.user;
         },
         logs(){
-            let l = this.$root.logs || [];
-            // l.lenght>0?l.slice(0,5):[];
-            return this.$root.logs.slice(0,5);
+            return this.$root.logs;
         },
+        logCounts(){
+            s=0;f=0;
+            this.logs.forEach(log => {
+                if(log.status=='success') s++;
+                else f++;
+            });
+            return {'success':s,'failure':f}
+        },
+        subscribed(){
+            return this.$root.subscription_list.length;
+        }
     },
     created(){
-    //   this.fetchLogs();
+    
     this.loading = true;
     this.$root.getLogs()
     .finally(()=>{this.loading=false});
-    console.log('productList in home from root',this.productList);
+        
     },
 }
 </script>

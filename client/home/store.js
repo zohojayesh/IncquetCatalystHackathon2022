@@ -96,6 +96,7 @@ const useCounterStore = Pinia.defineStore('counter', {
         if(!this.user) return;
         
         let query = `SELECT * FROM Logs where user_id=${this.user.user_id}` + (sub_id?` and subscription_id=${sub_id}`:'');
+        query+= 'ORDER BY CREATEDTIME DESC';
         return this.runQuery(query,'Logs')
         .then(data=>{
           this.logs = data;          

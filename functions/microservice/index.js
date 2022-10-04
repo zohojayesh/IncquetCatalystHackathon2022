@@ -6,13 +6,16 @@ const shortid = require('shortid');
 const getCSV = require('get-csv');
 const handler = require('./handler');
 
+const CSV2JSON_ID = 1;
+const URL_SHORTNER_ID = 2;
+
 const app = express();
 app.use(express.json());
 
 app.post("/URL_Shortner",async (req,res)=>{
 	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
 	let sub_id = req.query.subscription_id;
-	let check = await handler.checkSub(catalystApp,sub_id);
+	let check = await handler.checkSub(catalystApp,sub_id,URL_SHORTNER_ID);
 
 	if(check.status=='failure'){
 		res.status(200).json(check);
@@ -47,7 +50,7 @@ app.post("/URL_Shortner",async (req,res)=>{
 		log.status = 'failure';
 		log.meta = JSON.stringify(err);
 	}).finally(()=>{
-		createLog(datastore,2,sub_id,check.user_id,log)
+		createLog(datastore,URL_SHORTNER_ID,sub_id,check.user_id,log)
 	});
 
 
@@ -123,7 +126,7 @@ app.post("/csv2json",async (req,res)=>{
 	let catalystApp = catalyst.initialize(req, {type: catalyst.type.applogic});
 
 	let sub_id = req.query.subscription_id;
-	let check = await handler.checkSub(catalystApp,sub_id||0);
+	let check = await handler.checkSub(catalystApp,sub_id||0,CSV2JSON_ID);
 
 	if(check.status=='failure'){
 		res.status(200).json(check);
@@ -155,7 +158,7 @@ app.post("/csv2json",async (req,res)=>{
     }).finally(()=>{
 		console.log('log object : ',log);
 		let datastore = catalystApp.datastore();
-		createLog(datastore,1,sub_id,check.user_id,log);
+		createLog(datastore,CSV2JSON_ID,sub_id,check.user_id,log);
 	});
 })
 
@@ -172,11 +175,8 @@ function createLog(datastore,product_id,subscription_id,user_id,log){
 		meta:log.meta
     };
 
-	console.log('logInsertPayload',rowData);
-    //Use the table meta object to insert the row which returns a promise
-    let table = datastore.table('Logs');
-    let insertPromise = table.insertRow(rowData);
-    insertPromise.then((row) => {
+	let table = datastore.table('Logs');
+    table.insertRow(rowData).then((row) => {
 		console.log('log inserted',row);
 	}).catch(e=>{
 		console.log('log insersion error',e);
@@ -187,7 +187,7 @@ app.post("/test", async (req,res) => {
 
 	let sub_id = req.query.subscription_id;
 	var app = catalyst.initialize(req);
-	let resp = await handler.checkSub(app,sub_id);
+	let resp = await handler.checkSub(app,sub_id,CSV2JSON_ID);
 	console.log('resp from /test',resp);
 	res.status(200).send(resp);
 
